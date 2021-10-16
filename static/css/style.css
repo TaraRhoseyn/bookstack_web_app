@@ -1,0 +1,28 @@
+/* NAVBAR */
+
+body {
+    /* body content pushed to accommodate fixed navside. */
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    body {
+      padding-left: 0;
+    }
+  }
+
+@media only screen and (min-width : 992px) {
+    .sidenav-trigger {
+      visibility: hidden;
+    }
+  }
+
+.sidenav-trigger {
+    display: block;
+}
+
+/* NAVBAR ENDS */
+
+.material-icons {
+    color: black;
+} 
