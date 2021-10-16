@@ -21,6 +21,10 @@ body {
     display: block;
 }
 
+#logo_svg {
+    margin-top: 15px;
+}
+
 /* NAVBAR ENDS */
 
 .material-icons {
