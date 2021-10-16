@@ -38,6 +38,10 @@ body {
     margin-left: 20px;
 }
 
+.navbar-icons {
+    color: #725751!important;
+}
+
 /* NAVBAR ENDS */
 
 .material-icons {
