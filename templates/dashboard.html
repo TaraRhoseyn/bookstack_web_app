@@ -75,20 +75,42 @@
             <h1>Dashboard</h1>
             <section>
                 <div class="row">
-                    <div class="col s12 m6 card-panel">
+                    <div class="col s12 m6 custom-stack-card-half white" id="stack-card-left">
                         <p>Card test 1 - upper left half</p>
                     </div>
-                    <div class="col s12 m6 card-panel">
+                    <div class="col s12 m6 custom-stack-card-half white">
                         <p>Card test 2 - upper right half</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s12 card-panel">
+                    <div class="col s12 custom-stack-card white" id="stack-card-full">
                         <p>Card test 3 - bottom full</p>
                     </div>
                 </div>
             </section>
         </main>
+        <!-- Footer. Credit: Materialize-->
+        <footer class="page-footer white">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col l6 s12">
+                    <ul>
+                        <li class="grey-text">Copyright Bookstack 2021</li>
+                        <li class="grey-text">Privacy policy</li>
+                        <li class="grey-text">Contact us</li>
+                    </ul>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <ul>
+                    <li><a class="grey-text" href="#!">Link 1</a></li>
+                    <li><a class="grey-text" href="#!">Link 2</a></li>
+                    <li><a class="grey-text" href="#!">Link 3</a></li>
+                    <li><a class="grey-text" href="#!">Link 4</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
         <!-- Own JS scripts -->
         <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </body>

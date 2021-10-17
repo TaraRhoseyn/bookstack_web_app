@@ -44,6 +44,50 @@ body {
 
 /* NAVBAR ENDS */
 
+/* DASHBOARD */
+/* CARDS */
+
+@media only screen and (min-width : 993px) {
+    .custom-stack-card-half, .custom-stack-card {
+        box-shadow: 1px 1px 10px rgba(209, 209, 209, 0.91);
+        border-radius: 9px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    h1 {
+        margin-left: 44px;
+    }
+    
+    .row .col.m6 {
+        width: 45%;
+        margin-left: 40px;
+        height: 297px;
+    }
+
+    #stack-card-left {
+        margin-left: 50px;
+    }
+
+    #stack-card-full {
+        margin-left: 50px;
+        width: 92.5%;
+        height: 297px;
+    }
+}
+
+/* DASHBOARD ENDS */
+
+/* MISC */
+
 .material-icons {
     color: black;
 } 
+
+/* MISC ENDS */
+
+/* FOOTER */
+
+
+/* FOOTER ENDS */
+
