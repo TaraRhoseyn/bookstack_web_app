@@ -18,6 +18,11 @@ h2 {
     margin-left: 10px;
 }
 
+h3 {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
 /* NAVBAR */
 
 body {
@@ -102,6 +107,20 @@ body {
         width: 92.5%;
         height: 297px;
     }
+}
+
+.book-cover {
+    height: 110px;
+    margin-left: 10px;
+}
+
+.book-author {
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.book-title {
+    margin-bottom: 4px;
 }
 
 /* DASHBOARD ENDS */

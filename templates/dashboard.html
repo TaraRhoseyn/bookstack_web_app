@@ -81,15 +81,25 @@
             <h1>Dashboard</h1>
             <section>
                 <div class="row">
+                    <!-- First card -->
                     <div class="col s12 m6 custom-stack-card-half white" id="stack-card-left">
                         <h2>To read</h2>
-                        <img src="https://covers.openlibrary.org/b/isbn/9780743273565-M.jpg" alt="cover">
+
+                        {% for book in books %}
+                            <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg" alt="{{ book.book_title }} cover"><br>
+                            <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
+                            <p class="book-author">{{ book.book_author }}</p>
+                        {% endfor %}
+
+                        <!-- <img src="https://covers.openlibrary.org/b/isbn/9780743273565-M.jpg" alt="cover"> -->
                     </div>
+                    <!-- Second card -->
                     <div class="col s12 m6 custom-stack-card-half white">
                         <h2>Challenges</h2>
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Third card -->
                     <div class="col s12 custom-stack-card white" id="stack-card-full">
                         <h2>Reviews</h2>
                     </div>
