@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Registration form -->
+        <h1>Register</h1>
+        <div class="row">
+            <form class="col s12">
+            <div class="row">
+                <!-- Username -->
+                <div class="input-field col s12 m6">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="username" id="username" class="validate" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" required>
+                <label for="username">Username</label>
+                </div>
+                <!-- Password -->
+                <div class="input-field col s12 m6">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" name="password" id="password" class="validate" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" required>
+                <label for="password">Password</label>
+                </div>
+            </div>
+            </form>
+        </div>
+
+{% endblock %}
