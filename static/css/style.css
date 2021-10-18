@@ -125,6 +125,22 @@ body {
 
 /* DASHBOARD ENDS */
 
+/* REGISTER FORM */
+
+@media only screen and (min-width: 1025px) {
+    #register-form-btn {
+        margin-left: 44px;
+    }
+
+    .input-field {
+        height: 100px!important;
+    }
+}
+
+
+/* REGISTER FORM ENDS */
+
+
 /* MISC */
 
 .material-icons {
