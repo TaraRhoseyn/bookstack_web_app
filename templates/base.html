@@ -96,8 +96,22 @@
         </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-        {% block content %}
-        {% endblock %}
+        <section>
+            <!-- Flashed messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for m in messages %}
+                        <p>{{ m }}</p>
+                {% endif %}
+            {% endwith %}
+
+        </section>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        
         
         <!-- Footer. Credit: Materialize-->
         <footer class="page-footer white">
