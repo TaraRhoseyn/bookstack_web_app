@@ -1,10 +1,10 @@
 /* jshint esversion: 6 */
 
 $(document).ready(function(){
+    // Init Materialize components
     $(".sidenav").sidenav();
     $(".button-collapse").sideNav();
   });
-
 
 // Remove or show more form content depending on if user has read book
 // Credit: Stack Overflow
