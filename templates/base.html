@@ -56,56 +56,57 @@
                         fill="#725751" />
                 </svg>
             </a>
+            <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li>
+                    <div class="navbar_image">
+                        <img src="static/images/hero_image.png">
+                    </div>
+                </li>
+                <li>
+                    <a href="{{ url_for('dashboard') }}">
+                        <i class="material-icons navbar-icons">dashboard</i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons navbar-icons">bookmark</i>
+                        Stacks
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons navbar-icons">rate_review</i>
+                        Reviews
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons navbar-icons">stars</i>
+                        Challenges
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('register') }}">
+                        <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
+                        Register
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('login') }}">
+                        <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
+                        Log in
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('logout') }}">
+                        LOG OUT
+                    </a>
+                </li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </nav>
-        <ul id="slide-out" class="sidenav sidenav-fixed">
-            <li>
-                <div class="navbar_image">
-                    <img src="static/images/hero_image.png">
-                </div>
-            </li>
-            <li>
-                <a href="{{ url_for('dashboard') }}">
-                    <i class="material-icons navbar-icons">dashboard</i>
-                    Dashboard
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="material-icons navbar-icons">bookmark</i>
-                    Stacks
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="material-icons navbar-icons">rate_review</i>
-                    Reviews
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="material-icons navbar-icons">stars</i>
-                    Challenges
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for('register') }}">
-                    <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
-                    Register
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for('login') }}">
-                    <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
-                    Log in
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for('logout') }}">
-                    LOG OUT
-                </a>
-            </li>
-        </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        
 
         <section>
             <!-- Flashed messages -->
