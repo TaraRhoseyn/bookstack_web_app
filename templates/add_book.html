@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Add book to stack</h1>
+
+<div class="row">
+    <form class="col s12" method="POST" action="{{ url_for('add_book') }}">
+        <div class="row">
+            <div class="container">
+                <!-- Book title -->
+                <div class="input-field col s12">
+                    <input type="text" name="book_title" id="book_title" class="validate" minlength="2"
+                        pattern="^[a-zA-Z]{2,50}$" required>
+                    <label for="book_title">Book title</label>
+                </div>
+                <!-- Book author -->
+                <div class="input-field col s12">
+                    <input type="text" name="book_author" id="book_author" class="validate" minlength="5"
+                        pattern="^[a-zA-Z]{5,50}$" required>
+                    <label for="book_author">Book title</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="book_author" id="book_author" class="validate" minlength="2"
+                        pattern="^[0-9]{2,50}$" required>
+                    <label for="book_author">ISBN</label>
+                </div>
+                <div class="row">
+                    <!-- Submit button -->
+                    <button class="btn waves-effect waves-light green lighten-1" id="add_book" type="submit"
+                        name="action">Add book</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
