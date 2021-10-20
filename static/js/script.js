@@ -9,6 +9,7 @@ $(document).ready(function(){
 $("#read_status").on("click", toggleDropdown);
 
 // Remove or show more form content depending on if user has read book
+// Credit: Stack Overflow
 function toggleDropdown(){
 
   var dropdown = document.getElementById('extra-content')
