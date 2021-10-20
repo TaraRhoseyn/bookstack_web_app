@@ -26,18 +26,23 @@
                 </div>
                   <!-- Switch -->
                 <div class="switch">
-                    <label>
+                    <label for="read_status">
                         Unread
-                        <input type="checkbox">
+                        <input type="checkbox" id="read_status" name="read_status">
                         <span class="lever"></span>
                         Read
                     </label>
                 </div>
-                <div class="row">
+                <!-- <label for="read_status">
+                    <input type="checkbox" id="read_status" name="read_status" class="filled-in"/>
+                    <span>Read?</span>
+                  </label>
+                <div class="row"> -->
                     <!-- Submit button -->
                     <button class="btn waves-effect waves-light green lighten-1" id="add_book" type="submit"
                         name="action">Add book</button>
                 </div>
+                <h3 id="extra-content" class="hidden">Test text</h3>
             </div>
         </div>
     </form>
