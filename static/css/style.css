@@ -15,7 +15,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 h3 {
@@ -121,6 +121,20 @@ body {
 
 .book-title {
     margin-bottom: 4px;
+}
+
+.to-read-stack {
+    display: flex;
+}
+
+.to-read-stack > a {
+    margin-left: auto;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+}
+
+.to-read-stack > a > i {
+    font-size: 40px!important;
 }
 
 /* DASHBOARD ENDS */
