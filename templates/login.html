@@ -4,7 +4,8 @@
     <!-- Log in form -->
     <h1>Log in</h1>
     <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('register') }}">
+        <!-- Bug fix: update url_for view from 'register' to correct 'login' -->
+        <form class="col s12" method="POST" action="{{ url_for('login') }}">
         <div class="row">
             <!-- Username -->
             <div class="input-field col s12 m6">
