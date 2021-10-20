@@ -7,7 +7,13 @@
             <div class="row">
                 <!-- First card -->
                 <div class="col s12 m6 custom-stack-card-half white" id="stack-card-left">
-                    <h2>To read</h2>
+                    <div class="row to-read-stack">
+                        <h2>To read</h2>
+                        <a href="{{ url_for('add_book') }}">
+                            <i class="material-icons" id="user-icon" aria-describedby="Add new book">add</i>
+                        </a>
+                    </div>
+                    
 
                     {% for book in books %}
                         <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
