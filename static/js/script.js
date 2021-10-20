@@ -10,6 +10,7 @@ $("#read_status").on("click", showFormContent);
 // Remove or show more form content depending on if user has read book
 // Credit: Stack Overflow
 function showFormContent(){
+  console.log("clicked")
 
   var formContent = document.getElementById('extra-content')
 
