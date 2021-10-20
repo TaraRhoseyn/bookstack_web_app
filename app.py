@@ -70,6 +70,12 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/logout")
+def logout():
+    flash("You are logged out.")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 # Handles 404 errors. Credit: GeeksForGeeks
 @app.errorhandler(404)
 def not_found(e):
