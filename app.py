@@ -82,6 +82,15 @@ def add_book():
             "read_date": request.form.get("date_read"),
             "added_by": session["user"]
         }
+        
+        if is_read == "yes":
+            book_in_stack = {
+                "stack_type": "read",
+                "read_date": request.form.get("date_read"),
+                "created_by": session["user"],
+            }
+            mongo.db.stacks.insert_one(book_in_stack)
+            
         mongo.db.books.insert_one(book)
         flash("Book added!")
         return redirect(url_for("dashboard"))
