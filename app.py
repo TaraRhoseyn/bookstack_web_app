@@ -79,15 +79,23 @@ def add_book():
             "book_author": request.form.get("book_author"),
             "isbn": request.form.get("isbn"),
             "is_read": is_read,
-            "read_date": request.form.get("date_read"),
-            "added_by": session["user"]
+            "added_by": session["user"],
+            "book_review": request.form.get("book_review"),
+            "date_read": request.form.get("date_read"),
         }
-        
+    
         if is_read == "yes":
             book_in_stack = {
                 "stack_type": "read",
-                "read_date": request.form.get("date_read"),
                 "created_by": session["user"],
+                "book": book
+            }
+            mongo.db.stacks.insert_one(book_in_stack)
+        else:
+            book_in_stack = {
+                "stack_type": "unread",
+                "created_by": session["user"],
+                "book": book
             }
             mongo.db.stacks.insert_one(book_in_stack)
             
