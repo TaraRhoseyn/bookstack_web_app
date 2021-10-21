@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   // Init Materialize components
-  $(".sidenav").sidenav;
+  $(".sidenav").sidenav();
   $(".button-collapse").sidenav();
   $(".collapsible").collapsible();
   $(".tooltipped").tooltip();
