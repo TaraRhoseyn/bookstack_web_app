@@ -70,8 +70,22 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/add_book")
+@app.route("/add_book", methods=["GET", "POST"])
 def add_book():
+    if request.method == "POST":
+        is_read = "yes" if request.form.get("read_status") else "no"
+        book = {
+            "book_title": request.form.get("book_title"),
+            "book_author": request.form.get("book_author"),
+            "isbn": request.form.get("isbn"),
+            "is_read": is_read,
+            "read_date": request.form.get("date_read"),
+            "added_by": session["user"]
+        }
+        mongo.db.books.insert_one(book)
+        flash("Book added!")
+        return redirect(url_for("dashboard"))
+
     return render_template("add_book.html")
 
 
