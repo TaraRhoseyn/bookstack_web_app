@@ -43,6 +43,9 @@
 
 ### Design resources
 
+- [Figma](https://www.figma.com/) - Used for wireframing.
+- [Freepik](https://www.freepik.com/) - Imagery used in design.
+
 ### Testing resources
 
 ## Credits
