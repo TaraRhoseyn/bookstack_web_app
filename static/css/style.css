@@ -9,10 +9,11 @@
     --main-margin: 3rem;
     --card-box-shadow: 1px 1px 10px rgba(209, 209, 209, 0.91);
     --card-border-radius: 9px;
+    --font: 'Merriweather', sans-serif;
 }
 
 h1, h2 {
-    font-family: 'Merriweather', sans-serif;
+    font-family: var(--font);
 }
 
 h1 {
