@@ -48,6 +48,12 @@
 
 ### Testing resources
 
+### General resources
+
+- [Stack overflow](https://stackoverflow.com/) - For general best practice.
+- [W3Schools](https://www.w3schools.com/) - For general best practice on formatting code and fixing small issues.
+- Code Institute Slack - For seeing examples of similar projects and understanding where others aimed to improve.
+
 ## Credits
 
 ### Code
