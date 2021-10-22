@@ -7,15 +7,15 @@
                 <!-- First card -->
                 <div id="first-card" class="col s12 m6 white grid-card" id="stack-card-left">
                     <div class="to-read-stack">
-                        <h2>To read</h2>
-                        <a class="tooltipped white" data-position="top" data-tooltip="Add new book" href="{{ url_for('add_book') }}">
-                            <i class="material-icons" id="user-icon" aria-describedby="Add new book">add</i>
+                        <h2 class="stack-header">To read</h2>
+                        <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('add_book') }}">
+                            <i class="material-icons card-icons" aria-describedby="Add new book">add</i>
                         </a>
                     </div>
                     <!-- Display first 3 books -->
                     <div class="card-grid-container">
                         {% for book in books[0:3] %}
-                            <div>
+                            <div class="book-in-card">
                                 <img class="book-cover"
                                     src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
                                     alt="{{ book.book_title }} cover"><br>
@@ -23,15 +23,20 @@
                                 <p class="book-author">{{ book.book_author }}</p>
                             </div>
                         {% endfor %}
+                        <div class="see-more">
+                            <a href="#" class="tooltipped white" data-position="top" data-tooltip="See all books">
+                                <i class="material-icons" aria-describedby="See all books">more_horiz</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- Second card -->
                 <div id="second-card" class="col s12 m6 grid-card white">
-                    <h2>Challenges</h2>
+                    <h2 class="stack-header">Challenges</h2>
                 </div>
                 <!-- Third card -->
                 <div id="third-card" class="col s12 grid-card white" id="stack-card-full">
-                    <h2>Reviews</h2>
+                    <h2 class="stack-header">Reviews</h2>
                 </div>
         </section>
     </main>

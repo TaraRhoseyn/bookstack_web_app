@@ -58,6 +58,13 @@ h3 {
     }
 }
 
+@media only screen and (min-width: 501px) {
+    .book-cover {
+        height: 150px;
+        margin-left: 10px;
+    }
+}
+
 #first-card {
     grid-area: first-card;
 }
@@ -77,10 +84,36 @@ h3 {
 
 .card-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 0.2fr;
     grid-template-rows: 1fr;
+    grid-template-areas: 
+        "book-in-card book-in-card book-in-card see-more";
 }
 
+@media only screen and (max-width: 700px) {
+    .card-grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.4fr;
+        grid-template-areas: 
+            "book-in-card"
+            "book-in-card" 
+            "book-in-card"
+            "see-more";
+        text-align: center;
+    }
+    .book-cover {
+        height: 180px;
+    }
+}
+
+.book-in-card {
+    grid: book-in-card;
+}
+
+.see-more {
+    grid: see-more;
+}
 
 
 /* END GRID LAYOUTS */
@@ -135,11 +168,6 @@ nav a {
 
 /* NAVBAR ENDS */
 
-.book-cover {
-    height: 110px;
-    margin-left: 10px;
-}
-
 .book-author {
     margin-left: 10px;
     margin-top: 2px;
@@ -149,6 +177,9 @@ nav a {
     margin-bottom: 4px;
 }
 
+.to-read-stack {
+    display: inline;
+}
 
 .to-read-stack > a {
     margin-left: auto;
@@ -158,6 +189,14 @@ nav a {
 
 .to-read-stack > a > i {
     font-size: 40px!important;
+}
+
+.stack-header {
+    display: inline-block;
+}
+
+.add-icon {
+    float: right;
 }
 
 /* DASHBOARD ENDS */
@@ -184,6 +223,10 @@ nav a {
     color: black;
 } 
 
+.material-icons:hover {
+    color: green;
+} 
+
 #add_book {
     margin-top: 20px;
 }
@@ -192,5 +235,8 @@ nav a {
     display: none;
 }
 
-/* MISC ENDS */
+.card-icons {
+    font-size: 20px;
+}
 
+/* MISC ENDS */
