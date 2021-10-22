@@ -49,7 +49,13 @@
 ### Testing resources
 
 ## Credits
+
 ### Code
+
 - **Code Institute** - For their lessons on Jinja, Flask and Python. Especially their 'Task Manager Mini Project'. 
 - **Geek for Geeks** - For [404 error handling](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/) within Flask.
 - **Stack Overflow** - For using [classList.toggle() method](https://stackoverflow.com/questions/52556194/how-to-toggle-on-off-javascript) to display or hide content upon event listeners. 
+
+### Media
+
+- **Freepik** - For using [illustration](https://www.freepik.com/free-vector/cozy-home-composition-with-character-girl-warm-clothes-reading-book-lounge-chair-illustration_17345961.htm#page=1&query=book%20reading&position=47&from_view=search) in the main navbar and home page of the site.
