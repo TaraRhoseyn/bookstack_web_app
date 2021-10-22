@@ -16,33 +16,28 @@
 - I want to challenge myself to read more books.
 
 ## Technologies Used
+
 ### Languages
-- HTML5
-- CSS3
-- JavaScript
-- Python
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
 
 ### Frameworks & Libraries
-1. Flask
-- Python web framework, used for displaying data from backend databases to frontend presentation.
-2. Materialize
-- CSS framework, mainly used for components.
-3. jQuery
-- JavaScript library, used for refactoring code.
-4. MongoDB
-- Cloud-based NoSQL database, used for housing data.
-5. Google Fonts
-- Used in the design throughout.
-6. Google Icons
-- Used in the design throughout.
+
+- [Flask](https://flask.palletsprojects.com/) - Python web framework, used for displaying data from backend databases to frontend presentation.
+- [Materialize](https://materializecss.com/) - CSS framework, mainly used for components.
+- [jQuery](https://jquery.com/) - JavaScript library, used for refactoring code.
+- [MongoDB](https://www.mongodb.com/) - Cloud-based NoSQL database, used for housing data.
+- [Google Fonts](https://fonts.google.com/) - Merriweather font used in the design throughout.
+- [Google Icons](https://fonts.google.com/icons) - Used in the design throughout.
 
 ### Workspace and version control
-1. GitHub/Git
-- Remote repository storage, used for storage and version control. 
-2. Gitpod/VSCode
-- Integrated Development Environments (IDEs), Gitpod was used mainly with desktop VSCode being used occassionality.
-3. Heroku
-- Used for deployment. 
+
+- [GitHub & Git](https://github.com/) - Remote repository storage, used for storage and version control. 
+- [Gitpod/VSCode](https://www.gitpod.io/) - Integrated Development Environments (IDEs), Gitpod was used mainly with desktop VSCode being used occassionality.
+- [Heroku](https://www.heroku.com/) - Used for deployment. 
 
 ## Resources
 
