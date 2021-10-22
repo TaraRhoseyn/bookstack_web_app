@@ -118,11 +118,15 @@ h3 {
     grid: see-more;
 }
 
-.card-icon-mid {
+.inner-see-more {
     position: absolute;
     top: 50%;
     height: 100px;
     margin-top: -50px;
+}
+
+.card-icon-see-more {
+    font-size: 30px;
 }
 
 
