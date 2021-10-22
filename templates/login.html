@@ -2,34 +2,34 @@
 {% block content %}
 
     <!-- Log in form -->
-    <h1>Log in</h1>
-    <div class="row">
-        <!-- Bug fix: update url_for view from 'register' to correct 'login' -->
-        <form class="col s12" method="POST" action="{{ url_for('login') }}">
+    <div class="container">
+        <h1>Log in</h1>
         <div class="row">
-            <!-- Username -->
-            <div class="input-field col s12 m6">
-                <i class="material-icons prefix">account_circle</i>
-                <input type="text" name="username" id="username" class="validate" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" required>
-                <label for="username">Username</label>
-            </div>
-            <!-- Password -->
-            <div class="input-field col s12 m6">
-                <i class="material-icons prefix">lock</i>
-                <input type="password" name="password" id="password" class="validate" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" required>
-                <label for="password">Password</label>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Submit button -->
-            <button class="btn waves-effect waves-light green lighten-1" id="login-form-btn" type="submit" name="action">Log in</button>
-        </div>
-        </form>
-    </div>
-
-    <div class="row">
-        <div class="col">
-             <a href="{{ url_for('register') }}">Need to register?</a> 
+            <!-- Bug fix: update url_for view from 'register' to correct 'login' -->
+            <form class="col s12" method="POST" action="{{ url_for('login') }}">
+                <div class="row">
+                    <!-- Username -->
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" name="username" id="username" class="validate" maxlength="20"
+                            pattern="^[a-zA-Z0-9]{5,20}$" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" name="password" id="password" class="validate" maxlength="20"
+                            pattern="^[a-zA-Z0-9]{5,20}$" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Submit button -->
+                    <button class="btn waves-effect waves-light green lighten-1" id="login-form-btn" type="submit"
+                        name="action">Log in</button>
+                    <a class="form-redirect-query" href="{{ url_for('register') }}">Need to register?</a>
+                </div>
+            </form>
         </div>
     </div>
 
