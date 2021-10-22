@@ -14,12 +14,18 @@
                         </a>
                     </div>
                     <!-- Display first 3 books -->
-                    {% for book in books[0:3] %}
-                        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
-                            alt="{{ book.book_title }} cover"><br>
-                        <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
-                        <p class="book-author">{{ book.book_author }}</p>
-                    {% endfor %}
+                    <div class="grid-container">
+                        {% for book in books[0:3] %}
+                            <div class="grid-container-item">
+                                <img class="book-cover"
+                                    src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
+                                    alt="{{ book.book_title }} cover"><br>
+                                <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
+                                <p class="book-author">{{ book.book_author }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+
                 </div>
                 <!-- Second card -->
                 <div class="col s12 m6 custom-stack-card-half white">

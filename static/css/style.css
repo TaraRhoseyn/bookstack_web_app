@@ -23,6 +23,15 @@ h3 {
     margin-left: 10px;
 }
 
+/* GRID CONTAINER */ 
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
 /* NAVBAR */
 
 body {
