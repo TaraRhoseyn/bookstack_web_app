@@ -5,6 +5,10 @@
 
 /* GLOBAL STYLES */ 
 
+:root{
+    --main--margin: 3rem;
+}
+
 h1, h2 {
     font-family: 'Merriweather', sans-serif;
 }
@@ -23,14 +27,52 @@ h3 {
     margin-left: 10px;
 }
 
-/* GRID CONTAINER */ 
+/* GRID LAYOUTS */ 
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "first-card second-card"
+        "third-card third-card";
+    grid-gap: 3rem;
+    margin: var(--main--margin);
 }
 
+#first-card {
+    grid-area: first-card;
+}
 
+#second-card {
+    grid-area: second-card;
+}
+
+#third-card {
+    grid-area: third-card;
+}
+
+.card-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+@media only screen and (max-width: 500px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "first-card"
+            "second-card"
+            "third-card";
+        grid-gap: 0.5rem;
+        margin: 0.5rem;
+    }
+}
+
+/* END GRID LAYOUTS */
 
 /* NAVBAR */
 
@@ -136,9 +178,6 @@ nav a {
     margin-bottom: 4px;
 }
 
-.to-read-stack {
-    display: flex;
-}
 
 .to-read-stack > a {
     margin-left: auto;

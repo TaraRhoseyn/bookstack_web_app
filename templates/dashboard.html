@@ -3,20 +3,19 @@
     <!-- Stack cards -->
     <main>
         <h1>Dashboard</h1>
-        <section>
-            <div class="row">
+        <section class="grid-container">
                 <!-- First card -->
-                <div class="col s12 m6 custom-stack-card-half white" id="stack-card-left">
-                    <div class="row to-read-stack">
+                <div id="first-card" class="col s12 m6 custom-stack-card-half white" id="stack-card-left">
+                    <div class="to-read-stack">
                         <h2>To read</h2>
                         <a class="tooltipped white" data-position="top" data-tooltip="Add new book" href="{{ url_for('add_book') }}">
                             <i class="material-icons" id="user-icon" aria-describedby="Add new book">add</i>
                         </a>
                     </div>
                     <!-- Display first 3 books -->
-                    <div class="grid-container">
+                    <div class="card-grid-container">
                         {% for book in books[0:3] %}
-                            <div class="grid-container-item">
+                            <div>
                                 <img class="book-cover"
                                     src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
                                     alt="{{ book.book_title }} cover"><br>
@@ -25,19 +24,15 @@
                             </div>
                         {% endfor %}
                     </div>
-
                 </div>
                 <!-- Second card -->
-                <div class="col s12 m6 custom-stack-card-half white">
+                <div id="second-card" class="col s12 m6 custom-stack-card-half white">
                     <h2>Challenges</h2>
                 </div>
-            </div>
-            <div class="row">
                 <!-- Third card -->
-                <div class="col s12 custom-stack-card white" id="stack-card-full">
+                <div id="third-card" class="col s12 custom-stack-card white" id="stack-card-full">
                     <h2>Reviews</h2>
                 </div>
-            </div>
         </section>
     </main>
 {% endblock %}
