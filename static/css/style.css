@@ -5,8 +5,10 @@
 
 /* GLOBAL STYLES */ 
 
-:root{
-    --main--margin: 3rem;
+:root {
+    --main-margin: 3rem;
+    --card-box-shadow: 1px 1px 10px rgba(209, 209, 209, 0.91);
+    --card-border-radius: 9px;
 }
 
 h1, h2 {
@@ -37,7 +39,22 @@ h3 {
         "first-card second-card"
         "third-card third-card";
     grid-gap: 3rem;
-    margin: var(--main--margin);
+    margin: var(--main-margin);
+}
+
+@media only screen and (max-width: 500px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "first-card"
+            "second-card"
+            "third-card";
+        column-gap: 0.5rem;
+        margin: 0.5rem;
+        row-gap: 2rem;
+    }
 }
 
 #first-card {
@@ -52,25 +69,18 @@ h3 {
     grid-area: third-card;
 }
 
+#first-card, #second-card, #third-card {
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--card-border-radius);
+}
+
 .card-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 }
 
-@media only screen and (max-width: 500px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-            "first-card"
-            "second-card"
-            "third-card";
-        grid-gap: 0.5rem;
-        margin: 0.5rem;
-    }
-}
+
 
 /* END GRID LAYOUTS */
 
@@ -127,10 +137,9 @@ nav a {
 /* DASHBOARD */
 /* CARDS */
 
-@media only screen and (min-width : 993px) {
+/* @media only screen and (min-width : 993px) {
     .custom-stack-card-half, .custom-stack-card {
-        box-shadow: 1px 1px 10px rgba(209, 209, 209, 0.91);
-        border-radius: 9px;
+
     }
 }
 
@@ -162,7 +171,7 @@ nav a {
         width: 92.5%;
         height: 297px;
     }
-}
+} */
 
 .book-cover {
     height: 110px;

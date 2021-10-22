@@ -5,7 +5,7 @@
         <h1>Dashboard</h1>
         <section class="grid-container">
                 <!-- First card -->
-                <div id="first-card" class="col s12 m6 custom-stack-card-half white" id="stack-card-left">
+                <div id="first-card" class="col s12 m6 white grid-card" id="stack-card-left">
                     <div class="to-read-stack">
                         <h2>To read</h2>
                         <a class="tooltipped white" data-position="top" data-tooltip="Add new book" href="{{ url_for('add_book') }}">
@@ -26,11 +26,11 @@
                     </div>
                 </div>
                 <!-- Second card -->
-                <div id="second-card" class="col s12 m6 custom-stack-card-half white">
+                <div id="second-card" class="col s12 m6 grid-card white">
                     <h2>Challenges</h2>
                 </div>
                 <!-- Third card -->
-                <div id="third-card" class="col s12 custom-stack-card white" id="stack-card-full">
+                <div id="third-card" class="col s12 grid-card white" id="stack-card-full">
                     <h2>Reviews</h2>
                 </div>
         </section>
