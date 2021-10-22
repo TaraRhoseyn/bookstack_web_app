@@ -134,45 +134,6 @@ nav a {
 
 /* NAVBAR ENDS */
 
-/* DASHBOARD */
-/* CARDS */
-
-/* @media only screen and (min-width : 993px) {
-    .custom-stack-card-half, .custom-stack-card {
-
-    }
-}
-
-@media only screen and (max-width : 993px) {
-    .custom-stack-card-half {
-        margin-top: 20px;
-    }
-}
-
-@media only screen and (min-width: 1025px) {
-    h1 {
-        margin-left: 44px;
-    }
-    
-    .row .col.m6 {
-        width: 45%;
-        margin-left: 40px;
-        height: 297px;
-    }
-
-    #stack-card-left {
-        margin-left: 50px;
-    }
-
-    #stack-card-full {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 50px;
-        width: 92.5%;
-        height: 297px;
-    }
-} */
-
 .book-cover {
     height: 110px;
     margin-left: 10px;
@@ -203,13 +164,13 @@ nav a {
 /* REGISTER FORM */
 
 @media only screen and (min-width: 1025px) {
-    #register-form-btn {
-        margin-left: 44px;
-    }
-
     .input-field {
         height: 100px!important;
     }
+}
+
+.form-redirect-query {
+    margin-left: 15px;
 }
 
 
