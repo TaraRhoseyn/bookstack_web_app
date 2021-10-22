@@ -89,6 +89,34 @@ h3 {
     grid-template-areas: 
         "book-in-card book-in-card book-in-card see-more";
 }
+@media only screen and (max-width: 1141px) {
+    .card-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.4fr;
+        grid-template-areas: 
+            "book-in-card book-in-card book-in-card"
+            "see-more see-more see-more";
+        text-align: center;
+    }
+
+    .inner-see-more {
+        margin-left: 125%;
+    }
+}
+
+@media only screen and (min-width: 1142px) {
+    .see-more {
+        position: relative;
+    }
+
+    .inner-see-more {
+        position: absolute;
+        top: 50%;
+        height: 100px;
+        margin-top: -50px;
+    }
+}
 
 @media only screen and (max-width: 700px) {
     .card-grid-container {
@@ -102,8 +130,9 @@ h3 {
             "see-more";
         text-align: center;
     }
-    .book-cover {
-        height: 180px;
+
+    .inner-see-more {
+        margin-left: 1%;
     }
 }
 
@@ -111,19 +140,11 @@ h3 {
     grid: book-in-card;
 }
 
-/* Credit for vertical alignment: W3 Docs */
-
 .see-more {
-    position: relative;
     grid: see-more;
 }
+/* Credit for vertical alignment: W3 Docs */
 
-.inner-see-more {
-    position: absolute;
-    top: 50%;
-    height: 100px;
-    margin-top: -50px;
-}
 
 .card-icon-see-more {
     font-size: 30px;
