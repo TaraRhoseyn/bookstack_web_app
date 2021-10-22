@@ -67,6 +67,10 @@ body {
     color: #725751!important;
 }
 
+nav a {
+    text-align: left;
+}
+
 /* NAVBAR ENDS */
 
 /* DASHBOARD */
