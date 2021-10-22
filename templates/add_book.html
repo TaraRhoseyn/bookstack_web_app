@@ -1,55 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Add book to stack</h1>
-
 <div class="row">
+    <div class="container">
+        <h1>Add book</h1>
+    </div>
     <form class="col s12" method="POST" action="{{ url_for('add_book') }}">
-        <div class="row">
-            <div class="container">
-                <!-- Book title -->
+        <div class="container">
+            <!-- Book title -->
+            <div class="input-field col s12">
+                <input type="text" name="book_title" id="book_title" class="validate" minlength="2"
+                    required>
+                <label for="book_title">Book title</label>
+            </div>
+            <!-- Book author -->
+            <div class="input-field col s12">
+                <input type="text" name="book_author" id="book_author" class="validate" minlength="5"
+                    required>
+                <label for="book_author">Book author</label>
+            </div>
+            <div class="input-field col s12">
+                <input type="text" name="isbn" id="isbn" class="validate" minlength="2"
+                    pattern="^[0-9]{2,50}$" required>
+                <label for="isbn">ISBN</label>
+            </div>
+            <!-- Switch -->
+            <div class="switch">
+                <label for="read_status">
+                    Unread
+                    <input type="checkbox" id="read_status" name="read_status">
+                    <span class="lever"></span>
+                    Read
+                </label>
+            </div>
+            <!-- Form inputs appear if book is read -->
+            <div class="hidden" id="extra-content">
+                <!-- Book review -->
                 <div class="input-field col s12">
-                    <input type="text" name="book_title" id="book_title" class="validate" minlength="2"
-                        required>
-                    <label for="book_title">Book title</label>
+                    <textarea id="book_review" class="materialize-textarea" class="validate" minlength="2"
+                    pattern="^[0-9]{2,50}$"></textarea>
+                    <label for="book_review">Book review</label>
                 </div>
-                <!-- Book author -->
+                <!-- Date book read -->
                 <div class="input-field col s12">
-                    <input type="text" name="book_author" id="book_author" class="validate" minlength="5"
-                        required>
-                    <label for="book_author">Book author</label>
+                    <input id="read_date" name="read_date" type="text" class="datepicker validate">
+                    <label for="read_date">Read Date</label>
                 </div>
-                <div class="input-field col s12">
-                    <input type="text" name="isbn" id="isbn" class="validate" minlength="2"
-                        pattern="^[0-9]{2,50}$" required>
-                    <label for="isbn">ISBN</label>
-                </div>
-                <!-- Switch -->
-                <div class="switch">
-                    <label for="read_status">
-                        Unread
-                        <input type="checkbox" id="read_status" name="read_status">
-                        <span class="lever"></span>
-                        Read
-                    </label>
-                </div>
-                <!-- Form inputs appear if book is read -->
-                <div class="hidden" id="extra-content">
-                    <!-- Book review -->
-                    <div class="input-field col s12">
-                        <textarea id="book_review" class="materialize-textarea" class="validate" minlength="2"
-                        pattern="^[0-9]{2,50}$"></textarea>
-                        <label for="book_review">Book review</label>
-                    </div>
-                    <!-- Date book read -->
-                    <div class="input-field col s12">
-                        <input id="read_date" name="read_date" type="text" class="datepicker validate">
-                        <label for="read_date">Read Date</label>
-                    </div>
-                </div>
-                <button class="btn waves-effect waves-light green" id="add_book" type="submit"
-                    name="action">Add book</button>
-                </div>
+            </div>
+            <button class="btn waves-effect waves-light green" id="add_book" type="submit"
+                name="action">Add book</button>
             </div>
         </div>
     </form>
