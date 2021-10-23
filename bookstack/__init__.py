@@ -24,7 +24,11 @@ def init_app():
     # Import blueprint routes
     from bookstack.authentication.routes import authentication
     from bookstack.errors.routes import errors
+    from bookstack.books.routes import books
+    from bookstack.main.routes import main
     # Register routes with app
-    bookstack.register_blueprint(authentication)
-    bookstack.register_blueprint(errors)
+    app.register_blueprint(authentication)
+    app.register_blueprint(errors)
+    app.register_blueprint(books)
+    app.register_blueprint(main)
     # Return app
