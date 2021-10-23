@@ -1,7 +1,7 @@
 /* jshint esversion: 6 */
 
+// Init Materialize components
 $(document).ready(function () {
-  // Init Materialize components
   $(".sidenav").sidenav();
   $(".button-collapse").sidenav();
   $(".collapsible").collapsible();
