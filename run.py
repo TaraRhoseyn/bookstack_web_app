@@ -81,7 +81,7 @@ def add_book():
             "is_read": is_read,
             "added_by": session["user"],
             "book_review": request.form.get("book_review"),
-            "date_read": request.form.get("read_date"),
+            "date_read": request.form.get("date_read"),
         }
     
         if is_read == "yes":
