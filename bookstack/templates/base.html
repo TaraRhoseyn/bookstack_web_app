@@ -63,7 +63,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="{{ url_for('dashboard') }}">
+                    <a href="{{ url_for('main.dashboard') }}">
                         <i class="material-icons navbar-icons">dashboard</i>
                         Dashboard
                     </a>
@@ -87,19 +87,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url_for('register') }}">
+                    <a href="{{ url_for('authentication.register') }}">
                         <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
                         Register
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url_for('login') }}">
+                    <a href="{{ url_for('authentication.login') }}">
                         <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
                         Log in
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url_for('logout') }}">
+                    <a href="{{ url_for('authentication.logout') }}">
                         LOG OUT
                     </a>
                 </li>

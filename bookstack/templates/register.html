@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Sign up today</h1>
         <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('register') }}">
+            <form class="col s12" method="POST" action="{{ url_for('authentication.register') }}">
                 <div class="row">
                     <!-- Username -->
                     <div class="input-field col s12 m6">
@@ -26,7 +26,7 @@
                     <!-- Submit button -->
                     <button class="btn waves-effect waves-light green lighten-1" id="register-form-btn" type="submit"
                         name="action">Register</button>
-                    <a class="form-redirect-query" href="{{ url_for('login') }}">Already registed? Log in</a>
+                    <a class="form-redirect-query" href="{{ url_for('authentication.login') }}">Already registed? Log in</a>
                 </div>
             </form>
         </div>

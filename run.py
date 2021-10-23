@@ -17,12 +17,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
-@app.route("/dashboard")
-def dashboard():
-    books = mongo.db.books.find()
-    return render_template("dashboard.html", books=books)
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
