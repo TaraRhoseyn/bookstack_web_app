@@ -15,15 +15,16 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+mongo.init_app(app)
 
-
-@app.route("/")
-@app.route("/dashboard")
-def dashboard():
-    books = mongo.db.books.find()
-    return render_template("dashboard.html", books=books)
-
-if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+def init_app():
+    """
+    Initialize the app with blueprint routes
+    """
+    # Import blueprint routes
+    from bookstack.authentication.routes import authentication
+    from bookstack.errors.routes import errors
+    # Register routes with app
+    bookstack.register_blueprint(authentication)
+    bookstack.register_blueprint(errors)
+    # Return app

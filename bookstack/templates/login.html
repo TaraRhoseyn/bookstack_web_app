@@ -6,7 +6,7 @@
         <h1>Log in</h1>
         <div class="row">
             <!-- Bug fix: update url_for view from 'register' to correct 'login' -->
-            <form class="col s12" method="POST" action="{{ url_for('login') }}">
+            <form class="col s12" method="POST" action="{{ url_for('authentication.login') }}">
                 <div class="row">
                     <!-- Username -->
                     <div class="input-field col s12 m6">
@@ -27,7 +27,7 @@
                     <!-- Submit button -->
                     <button class="btn waves-effect waves-light green lighten-1" id="login-form-btn" type="submit"
                         name="action">Log in</button>
-                    <a class="form-redirect-query" href="{{ url_for('register') }}">Need to register?</a>
+                    <a class="form-redirect-query" href="{{ url_for('authentication.register') }}">Need to register?</a>
                 </div>
             </form>
         </div>
