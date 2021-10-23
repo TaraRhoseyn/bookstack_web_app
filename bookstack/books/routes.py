@@ -2,6 +2,7 @@ from flask import (
     Blueprint, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from bookstack import mongo
 
 books = Blueprint('books', __name__)
 

@@ -2,6 +2,7 @@ from flask import (
     Flask, Blueprint, render_template,
     redirect)
 from flask_pymongo import PyMongo
+from bookstack import mongo
 
 main = Blueprint('main', __name__)
 
