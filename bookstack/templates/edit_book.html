@@ -27,11 +27,8 @@
                 <!-- Switch -->
                 <div class="switch">
                     <label for="read_status">
-                        {% if book.is_read == "on" %}
-                            <input type="checkbox" id="read_status" name="read_status">
-                        {% else %}
-                            <input type="checkbox" id="read_status" name="read_status">
-                        {% endif %}
+                        <input type="checkbox" id="read_status" name="read_status">
+                        <input type="checkbox" id="read_status" name="read_status">
                         Unread
                         <span class="lever"></span>
                         Read
