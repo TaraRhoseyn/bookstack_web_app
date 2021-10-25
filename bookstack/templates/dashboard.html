@@ -11,6 +11,9 @@
                         <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('books.add_book') }}">
                             <i class="material-icons card-icons" aria-describedby="Add new book">add</i>
                         </a>
+                        <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all books" href="{{ url_for('books.add_book') }}">
+                            <i class="material-icons card-icon-see-more" aria-describedby="See all books">more_horiz</i>
+                        </a>
                     </div>
                     <!-- Display first 3 books -->
                     <div class="card-grid-container">
@@ -27,7 +30,7 @@
                         {% endfor %}
                         <div class="see-more">
                             <a href="#" class="tooltipped white inner-see-more" data-position="top" data-tooltip="See all books">
-                                <i class="material-icons card-icon-see-more" aria-describedby="See all books">more_horiz</i>
+                                
                             </a>
                         </div>
                     </div>
