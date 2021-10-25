@@ -2,6 +2,7 @@ from flask import (
     Blueprint, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 from bookstack import mongo
 
 books = Blueprint('books', __name__)
@@ -34,3 +35,9 @@ def add_book():
         flash("Book added!")
         return redirect(url_for("main.dashboard"))
     return render_template("add_book.html")
+
+
+@books.route("/edit_book/<book_id>", methods=["GET", "POST"])
+def edit_book(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template("edit_book.html", book=book)

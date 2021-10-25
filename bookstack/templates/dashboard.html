@@ -25,7 +25,8 @@
                                         alt="{{ book.book_title }} cover"><br>
                                     <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
                                     <p class="book-author">{{ book.book_author }}</p>
-                                    </div>
+                                    <a href="{{ url_for('books.edit_book', book_id=book._id) }}" class="waves-effect waves-light btn">Edit</a>
+                                </div>
                             {% endif %}
                         {% endfor %}
                         <div class="see-more">
