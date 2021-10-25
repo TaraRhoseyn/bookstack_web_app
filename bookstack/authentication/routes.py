@@ -2,6 +2,7 @@ from flask import (
     Blueprint, Flask, flash, render_template,
     redirect, request, session, url_for)
 from werkzeug.security import generate_password_hash, check_password_hash
+from bookstack import mongo
 
 authentication = Blueprint('authentication', __name__)
 
