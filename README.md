@@ -15,6 +15,12 @@
 - I want to see what other users are saying about books I've read or want to read. 
 - I want to challenge myself to read more books.
 
+## Structure
+
+### Physical database model
+
+!()[]
+
 ## Technologies Used
 
 ### Languages
