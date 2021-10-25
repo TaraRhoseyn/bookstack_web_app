@@ -1,45 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="container">
-        <h1>Edit book details</h1>
-    </div>
-    <form class="col s12" method="POST" action="{{ url_for('books.edit_book', book_id=book._id) }}">
+    <div class="row">
         <div class="container">
-            <!-- Book title -->
-            <div class="input-field col s12">
-                <input type="text" name="book_title" id="book_title" class="validate" minlength="2"
-                    value="{{ book.book_title }}" required>
-                <label for="book_title">Book title</label>
-            </div>
-            <!-- Book author -->
-            <div class="input-field col s12">
-                <input type="text" name="book_author" id="book_author" class="validate" minlength="5"
-                    value="{{ book.book_author }}"required>
-                <label for="book_author">Book author</label>
-            </div>
-            <div class="input-field col s12">
-                <input type="text" name="isbn" id="isbn" class="validate" minlength="2"
-                    value="{{ book.isbn }}" required>
-                <label for="isbn">ISBN</label>
-            </div>
-            <!-- Switch -->
-            <div class="switch">
-                <label for="read_status">
-                    Unread
-                    <input type="checkbox" id="read_status" name="read_status">
-                    <span class="lever"></span>
-                    Read
-                </label>
-            </div>
-            <p>Please note: To update your review of this book, head over to Reviews.</p>
-            <button class="btn waves-effect waves-light green" id="add_book" type="submit"
-                name="action">Edit book</button>
-            </div>
+            <h1>Edit book details</h1>
         </div>
-    </form>
-</div>
-
+        <form class="col s12" method="POST" action="{{ url_for('books.edit_book', book_id=book._id) }}">
+            <div class="container">
+                <!-- Book title -->
+                <div class="input-field col s12">
+                    <input type="text" name="book_title" id="book_title" class="validate" minlength="2"
+                        value="{{ book.book_title }}" required>
+                    <label for="book_title">Book title</label>
+                </div>
+                <!-- Book author -->
+                <div class="input-field col s12">
+                    <input type="text" name="book_author" id="book_author" class="validate" minlength="5"
+                        value="{{ book.book_author }}"required>
+                    <label for="book_author">Book author</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="isbn" id="isbn" class="validate" minlength="2"
+                        value="{{ book.isbn }}" required>
+                    <label for="isbn">ISBN</label>
+                </div>
+                <!-- Switch -->
+                <div class="switch">
+                    <label for="read_status">
+                        {% if book.is_read == "on" %}
+                            <input type="checkbox" id="read_status" name="read_status">
+                        {% else %}
+                            <input type="checkbox" id="read_status" name="read_status">
+                        {% endif %}
+                        Unread
+                        <span class="lever"></span>
+                        Read
+                    </label>
+                </div>
+                <p>Please note: To update your review of this book, head over to Reviews.</p>
+                <button class="btn waves-effect waves-light green" id="add_book" type="submit"
+                    name="action">Edit book</button>
+                <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light red">Cancel changes</a>
+                </div>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}
