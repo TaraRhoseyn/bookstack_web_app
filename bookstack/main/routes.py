@@ -11,4 +11,6 @@ main = Blueprint('main', __name__)
 @main.route("/dashboard")
 def dashboard():
     books = mongo.db.books.find()
-    return render_template("dashboard.html", books=books)
+    reviews = mongo.db.reviews.find()
+    return render_template(
+        "dashboard.html", books=books, reviews=reviews)
