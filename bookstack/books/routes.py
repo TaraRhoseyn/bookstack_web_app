@@ -9,7 +9,7 @@ books = Blueprint('books', __name__)
 
 
 @books.route("/add_book", methods=["GET", "POST"])
-def add_book():
+def add_book() -> object:
     """
     This function adds books to the 'books'
     collection and adds reviews to the 'reviews'
@@ -39,7 +39,7 @@ def add_book():
 
 
 @books.route("/edit_book/<book_id>", methods=["GET", "POST"])
-def edit_book(book_id):
+def edit_book(book_id) -> object:
     """
     This function uses bson ObjectId
     to pull data from specific document within
@@ -62,3 +62,15 @@ def edit_book(book_id):
 
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     return render_template("edit_book.html", book=book)
+
+
+@books.route("/delete_book/<book_id>")
+def delete_book(book_id) -> object:
+    """
+    This function deletes book documents
+    from the books collection.
+    :return url_for of main.dashboard
+    """
+    mongo.db.books.remove({"_id": ObjectId(book_id)})
+    flash("Book removed.")
+    return redirect(url_for("main.dashboard"))

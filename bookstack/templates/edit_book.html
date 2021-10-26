@@ -38,6 +38,7 @@
                 <button class="btn waves-effect waves-light green" id="add_book" type="submit"
                     name="action">Edit book</button>
                 <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light red">Cancel changes</a>
+                <a href="{{ url_for('books.delete_book', book_id=book._id) }}" class="waves-effect waves-light btn">Delete book</a>
                 </div>
             </div>
         </form>
