@@ -14,6 +14,7 @@ def add_book():
     This function adds books to the 'books'
     collection and adds reviews to the 'reviews'
     collection.
+    :return render_template of add_book.html
     """
     if request.method == "POST":
         is_read = "yes" if request.form.get("read_status") else "no"
@@ -39,6 +40,14 @@ def add_book():
 
 @books.route("/edit_book/<book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
+    """
+    This function uses bson ObjectId
+    to pull data from specific document within
+    the 'books' collection, then pushes editted
+    data back to the collection in the db to be
+    updated. 
+    :return render_template of edit_book.html
+    """
     if request.method == "POST":
         is_read = "yes" if request.form.get("read_status") else "no"
         editted_book = {
