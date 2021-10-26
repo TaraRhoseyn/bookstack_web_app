@@ -56,7 +56,7 @@ def login():
 
 
 @authentication.route("/user_profile/<username>", methods=["GET"])
-def user_profile(username: object) -> object:
+def user_profile(username) -> object:
     """
     This function renders a profile of information
     linked to the logged in user.
@@ -67,7 +67,9 @@ def user_profile(username: object) -> object:
     if 'user' not in session:
         return redirect(url_for("home.html"))
     user = mongo.db.users.find_one({"username": username})
-    return render_template("user_profile.html", username=session['user'], user=user)
+    docs_length = mongo.db.books.find({"username": username})
+
+    return render_template("user_profile.html", username=session['user'], user=user, docs_length=docs_length)
 
 
 @authentication.route("/logout")
