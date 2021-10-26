@@ -60,8 +60,8 @@ def user_profile(username) -> object:
     """
     This function renders a profile of information
     linked to the logged in user.
-    :param username: username of user
-    :return render_template of user_profile.html
+    :param username: username of logged in user.
+    :return render_template of user_profile.html.
     """
     # If no user found = home page
     if 'user' not in session:
@@ -84,8 +84,39 @@ def user_profile(username) -> object:
             books_read=books_read, books_unread=books_unread)
 
 
+
+@authentication.route("/delete_profile/<username>", methods=["GET", "POST"])
+def delete_profile(username) -> object:
+    """
+    This function deletes information
+    linked to a user and associated user document
+    from the users collection.
+    """
+    try:
+        # Delete challenges added by user
+        mongo.db.challenges.delete_many({"added_by": username})
+        # Delete reviews added by user
+        mongo.db.reviews.delete_many({"added_by": username})
+        # Delete books added by user
+        mongo.db.books.delete_many({"added_by": username})
+        # Delete the user document from the users collection
+        mongo.db.users.remove({"username": username})
+        # Return to home
+        flash("We're sad to see you go! Your account is deleted.")
+        session.pop("user")
+    except Exception as e:
+        flash("An error occurred when trying to delete this profile: " +
+              getattr(e, 'message', repr(e)))
+    return redirect(url_for('authentication.register'))
+
+
+
 @authentication.route("/logout")
-def logout():
-    flash("You are logged out.")
+def logout() -> object:
+    """
+    This function logs the user
+    from the session
+    """
+    flash("You are logged out. Come back soon!")
     session.pop("user")
     return redirect(url_for("authentication.login"))

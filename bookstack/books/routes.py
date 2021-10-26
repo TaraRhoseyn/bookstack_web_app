@@ -30,7 +30,7 @@ def add_book() -> object:
             "book_review": request.form.get("book_review"),
             "book_title": request.form.get("book_title"),
             "book_author": request.form.get("book_author"),
-            "written_by": session["user"],
+            "added_by": session["user"],
         }
         mongo.db.reviews.insert_one(book_for_review)
         flash("Book added!")
