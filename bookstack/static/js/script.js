@@ -9,10 +9,12 @@ $(document).ready(function () {
   $("select").formSelect();
 });
 
-// Remove or show more form content depending on if user has read book
+// Toggle form content shown or hidden
 // Credit: Stack Overflow
 // Bug fix: use classList.toggle instead of if/else logic
 $("#read_status").on("click", showFormContent);
+$("#edit_profile_btn").on("click", showFormContent);
 function showFormContent(){
-  document.getElementById('extra-content').classList.toggle("hidden");
+  document.getElementById('edit_profile_form').classList.toggle("hidden");
+  
 }

@@ -96,13 +96,11 @@ def edit_profile(username) -> object:
         }
         # Update database with user information
         mongo.db.users.update({"username": username}, editted_profile)
-        # Let user know information updated
         flash("Your profile has been successfully updated.")
-        # Redirect home
-        return render_template(
-            "user_profile.html", username=session['user'], user=user)
-    return render_template(
-        "edit_profile.html")
+    user = mongo.db.users.find_one({"username": username})
+    return render_template("user_profile.html",
+        username=session['user'], user=user)
+
 
 
 @authentication.route("/delete_profile/<username>", methods=["GET", "POST"])
