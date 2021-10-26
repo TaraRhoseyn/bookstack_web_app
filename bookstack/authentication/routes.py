@@ -63,13 +63,25 @@ def user_profile(username) -> object:
     :param username: username of user
     :return render_template of user_profile.html
     """
-    # if no user found = home page
+    # If no user found = home page
     if 'user' not in session:
         return redirect(url_for("home.html"))
     user = mongo.db.users.find_one({"username": username})
-    docs_length = mongo.db.books.find({"username": username})
-
-    return render_template("user_profile.html", username=session['user'], user=user, docs_length=docs_length)
+    # Find docs in collection added by user & read
+    books_read = []
+    cur = mongo.db.books.find({"added_by": username, "is_read": "yes"})
+    for i in cur:
+        books_read.append(i)
+    books_read = len((books_read))
+    # Find docs in collection added by user & unread
+    books_unread = []
+    cur_unread = mongo.db.books.find({"added_by": username, "is_read": "no"})
+    for i in cur_unread:
+        books_unread.append(i)
+    books_unread = len((books_unread))
+    return render_template(
+        "user_profile.html", username=session['user'], user=user, 
+            books_read=books_read, books_unread=books_unread)
 
 
 @authentication.route("/logout")
