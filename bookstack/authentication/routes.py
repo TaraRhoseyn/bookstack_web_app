@@ -21,13 +21,11 @@ def register():
             flash("Username already taken.")
             return redirect(url_for("authentication.register"))
 
-        register = {
+        registered_user = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        
-        mongo.db.users.insert_one(register)
-
+        mongo.db.users.insert_one(registered_user)
         session["user"] = request.form.get("username").lower()
         flash("You are now registered!")
     return render_template("register.html")
@@ -80,9 +78,31 @@ def user_profile(username) -> object:
         books_unread.append(i)
     books_unread = len((books_unread))
     return render_template(
-        "user_profile.html", username=session['user'], user=user, 
+        "user_profile.html", username=session['user'], user=user,
             books_read=books_read, books_unread=books_unread)
 
+
+@authentication.route("/edit_profile/<username>", methods=["GET", "POST"])
+def edit_profile(username) -> object:
+    """
+    This function updates username
+    and password of users.
+    """
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": username})
+        editted_profile = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        # Update database with user information
+        mongo.db.users.update({"username": username}, editted_profile)
+        # Let user know information updated
+        flash("Your profile has been successfully updated.")
+        # Redirect home
+        return render_template(
+            "user_profile.html", username=session['user'], user=user)
+    return render_template(
+        "edit_profile.html")
 
 
 @authentication.route("/delete_profile/<username>", methods=["GET", "POST"])
@@ -105,7 +125,7 @@ def delete_profile(username) -> object:
         flash("We're sad to see you go! Your account is deleted.")
         session.pop("user")
     except Exception as e:
-        flash("An error occurred when trying to delete this profile: " +
+        flash("An error occurred when trying to delete this profile" + ":" +
               getattr(e, 'message', repr(e)))
     return redirect(url_for('authentication.register'))
 
