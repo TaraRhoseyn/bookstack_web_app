@@ -87,7 +87,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url_for('authentication.login') }}">
+                    <a href="{{ url_for('authentication.user_profile', username=session['user']) }}">
                         <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
                         User profile
                     </a>

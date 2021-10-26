@@ -55,6 +55,21 @@ def login():
     return render_template("login.html")
 
 
+@authentication.route("/user_profile/<username>", methods=["GET"])
+def user_profile(username: object) -> object:
+    """
+    This function renders a profile of information
+    linked to the logged in user.
+    :param username: username of user
+    :return render_template of user_profile.html
+    """
+    # if no user found = home page
+    if 'user' not in session:
+        return redirect(url_for("home.html"))
+    user = mongo.db.users.find_one({"username": username})
+    return render_template("user_profile.html", username=session['user'], user=user)
+
+
 @authentication.route("/logout")
 def logout():
     flash("You are logged out.")
