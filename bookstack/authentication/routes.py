@@ -3,6 +3,7 @@ from flask import (
     redirect, request, session, url_for)
 from werkzeug.security import generate_password_hash, check_password_hash
 from bookstack import mongo
+from bookstack.util import util
 
 authentication = Blueprint('authentication', __name__)
 
@@ -21,13 +22,18 @@ def register():
             flash("Username already taken.")
             return redirect(url_for("authentication.register"))
 
+        # Store img in s3 bucket
+        img_path = util.store_image('user_image')
+
         registered_user = {
+            "user_image": img_path,
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(registered_user)
         session["user"] = request.form.get("username").lower()
         flash("You are now registered!")
+
     return render_template("register.html")
 
 
