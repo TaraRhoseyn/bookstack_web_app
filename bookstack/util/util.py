@@ -21,7 +21,7 @@ def store_image(img_to_store: str) -> str:
     image file into an AWS s3 bucket.
     """
     img = request.files[img_to_store]
-    img_file = secure_filename(image.filename)
+    img_file = secure_filename(img.filename)
     try:
         s3 = boto3.resource('s3')
         s3.Bucket(s3_bucket).put_object(Key=img_file, Body=img)
