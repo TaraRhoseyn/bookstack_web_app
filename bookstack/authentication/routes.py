@@ -98,8 +98,8 @@ def edit_profile(username) -> object:
         mongo.db.users.update({"username": username}, editted_profile)
         flash("Your profile has been successfully updated.")
     user = mongo.db.users.find_one({"username": username})
-    return render_template("user_profile.html",
-        username=session['user'], user=user)
+    return render_template(
+        "user_profile.html", username=session['user'], user=user)
 
 
 

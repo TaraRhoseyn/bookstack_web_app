@@ -45,7 +45,7 @@ def edit_book(book_id) -> object:
     to pull data from specific document within
     the 'books' collection, then pushes editted
     data back to the collection in the db to be
-    updated. 
+    updated.
     :return render_template of edit_book.html
     """
     if request.method == "POST":
