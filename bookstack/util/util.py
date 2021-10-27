@@ -4,16 +4,14 @@ from flask import Flask, request
 from botocore.exceptions import ClientError
 from werkzeug.utils import secure_filename
 
-# AWS creds
-client = boto3.client('s3',
-                      aws_access_key_id=os.environ.get("AWS_ACCESS_KEY"),
-                      aws_secret_access_key=os.environ.get
-                      ("AWS_SECRET_KEY"))
-
 # AWS variables
 s3_bucket = "ci-ms3-bookstack"
 bucket_url = "https://ci-ms3-bookstack.s3.eu-west-2.amazonaws.com/"
-
+# AWS creds
+client = boto3.client('s3',
+                      aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
+                      aws_secret_access_key=os.environ.get
+                      ("AWS_SECRET_ACCESS_KEY"))
 
 def store_image(img_to_store: str) -> str:
     """
