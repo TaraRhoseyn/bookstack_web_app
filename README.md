@@ -19,7 +19,15 @@
 
 ### Physical database model
 
+**Original database model**
 
+!(Original database model)[https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/og_database_model.PNG]
+
+The model above was my original intention for the schema of the database used for the project. Due to need for foreign keys I realised this schema would be better deployed using a relational database rather than a NoSQL document-based database that I was using for this project. 
+
+Upon realising this I changed my database model to reflect better use of the MongoDB database. Please note: the connections shown in the model here do not reflect foreign keys but when the same data is pushed to the different collections.
+
+**Current/updated database model** 
 
 ## Technologies Used
 
