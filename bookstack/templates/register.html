@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Sign up today</h1>
         <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('authentication.register') }}">
+            <form enctype="multipart/form-data" class="col s12" method="POST" action="{{ url_for('authentication.register') }}">
                 <div class="row">
                     <!-- Username -->
                     <div class="input-field col s12 m6">
@@ -20,6 +20,10 @@
                         <input type="password" name="password" id="password" class="validate" maxlength="20"
                             pattern="^[a-zA-Z0-9]{5,20}$" required>
                         <label for="password">Password</label>
+                    </div>
+                    <!-- User profile image -->
+                    <div class="input-field col s12">
+                        <input type="file" class="form-control validate" id="user_image" value="file" required>
                     </div>
                 </div>
                 <div class="row">
