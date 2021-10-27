@@ -69,7 +69,7 @@ def user_profile(username) -> object:
     """
     # If no user found = home page
     if 'user' not in session:
-        return redirect(url_for("home.html"))
+        return redirect(url_for("main.dashboard"))
     user = mongo.db.users.find_one({"username": username})
     # Find docs in collection added by user & read
     books_read = []
