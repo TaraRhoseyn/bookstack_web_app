@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form id="contact-form" onsubmit="return validateForm()" name="contactForm" novalidate>
+        <div id="name-error" class="text-center"></div>
+        <input type="text" id="fromName" class="my-5 form-elem" placeholder="Your name">
+        <div id="email-error" class="text-center"></div>
+        <input type="email" id="email" class="my-5 form-elem" placeholder="Your email address">
+        <div id="msg-error" class="text-center"></div>
+        <textarea id="message" class="my-5 form-elem" placeholder="Your message"></textarea>
+        <button type="submit" class="my-5 form-elem" id='message-button'>Send message</button>
+    </form>
+
+{% endblock %}
