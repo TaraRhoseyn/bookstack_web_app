@@ -69,13 +69,25 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - [W3Schools](https://www.w3schools.com/) - For general best practice on formatting code and fixing small issues.
 - Code Institute Slack - For seeing examples of similar projects and understanding where others aimed to improve.
 
+
+## Bugs
+
+Bugs found and resolved during development:
+
+**Bug 1** - When rendering user information to the user_profile template, the data for the number of books users had read or not read was causing an error due to the data being a cursor Object. 
+**Solution** - I researched the topic on Stack OverflowI converted the cursor Object into a dictionary to then loop over and append to existing variable, which is where the data is displayed from. 
+
+**Bug 2** - When updating your username and password in the user_profile template, the data would be successfully updated in the database but not in the variables stored that displayed the data to the frontend. So you would change your username, but the username you'd see at the top of the user_profile template would remain the same.
+**Solution** - Removing the render_template that kept users on the same page and updated the flask session (using session.pop()) to allow the browser to refresh session user upon the user re-logging in with their new credentials.
+
+
 ## Credits
 
 ### Code
 
 - **Code Institute** - For their lessons on Jinja, Flask and Python. Especially their 'Task Manager Mini Project'. 
 - **Geek for Geeks** - For [404 error handling](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/) within Flask.
-- **Stack Overflow** - For using [classList.toggle() method](https://stackoverflow.com/questions/52556194/how-to-toggle-on-off-javascript) to display or hide content upon event listeners. 
+- **Stack Overflow** - For using [classList.toggle() method](https://stackoverflow.com/questions/52556194/how-to-toggle-on-off-javascript) to display or hide content upon event listeners. For [converting a cursor object into a dict](https://stackoverflow.com/questions/28968660/how-to-convert-a-pymongo-cursor-cursor-into-a-dict)
 - **Angela Delise** - For informing [responsive CSS grid layout](https://www.youtube.com/watch?v=68O6eOGAGqA) best practices.
 - **W3 Docs** - For [vertical alignments](https://www.w3docs.com/snippets/css/how-to-vertically-align-elements-in-a-div.html) of elements.
 - **Corey Schafer** - For [Blueprints and Configuration guidance for codebase structure](https://www.youtube.com/watch?v=Wfx4YBzg16s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12)
