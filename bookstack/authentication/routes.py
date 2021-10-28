@@ -88,6 +88,8 @@ def user_profile(username) -> object:
     cur_pic = mongo.db.users.find({"username": username}, {"user_image"})
     for i in cur_pic:
         profile_picture.append(i)
+    
+    
 
     return render_template(
         "user_profile.html", username=session['user'], user=user,
@@ -109,10 +111,11 @@ def edit_profile(username) -> object:
         }
         # Update database with user information
         mongo.db.users.update({"username": username}, editted_profile)
-        flash("Your profile has been successfully updated.")
+        flash(
+            "Your profile has been successfully updated, please log back in.")
+        session.pop("user")
     user = mongo.db.users.find_one({"username": username})
-    return render_template(
-        "user_profile.html", username=session['user'], user=user)
+    return redirect(url_for('authentication.login'))
 
 
 
