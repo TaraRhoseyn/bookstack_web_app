@@ -22,7 +22,9 @@ def store_image(img_to_store: str) -> str:
     img_file = secure_filename(img.filename)
     try:
         s3 = boto3.resource('s3')
-        s3.Bucket(s3_bucket).put_object(Key=img_file, Body=img)
+        s3.Bucket(s3_bucket).put_object(
+            Key=img_file, Body=img, ACL='public-read'
+            )
     except ClientError:
         raise Exception("The image cannot be uploaded to the AWS S3 bucket.")
     img_path = bucket_url + img_file

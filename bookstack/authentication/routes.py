@@ -83,18 +83,19 @@ def user_profile(username) -> object:
     for i in cur_unread:
         books_unread.append(i)
     books_unread = len((books_unread))
+
+    # THE PROBLEM:::
     # Find user profile picture
-    profile_picture = []
-    cur_pic = mongo.db.users.find({"username": username}, {"user_image"})
-    for i in cur_pic:
-        profile_picture.append(i)
+    # profile_picture = " "
+    # cur_pic = mongo.db.users.find({"username": username}, {"user_image"})
+    # for i in cur_pic:
+    #     profile_picture.append(i['user_image'])
     
     
 
     return render_template(
         "user_profile.html", username=session['user'], user=user,
-            books_read=books_read, books_unread=books_unread,
-            profile_picture=profile_picture)
+            books_read=books_read, books_unread=books_unread)
 
 
 @authentication.route("/edit_profile/<username>", methods=["GET", "POST"])
