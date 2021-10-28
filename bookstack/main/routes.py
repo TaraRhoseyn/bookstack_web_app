@@ -8,6 +8,11 @@ main = Blueprint('main', __name__)
 
 
 @main.route("/")
+@main.route("/home")
+def home():
+    return render_template("home.html")
+
+
 @main.route("/dashboard")
 def dashboard():
     books = mongo.db.books.find()

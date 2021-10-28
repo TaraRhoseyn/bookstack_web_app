@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dashboard - Bookstack</title>
+        <title>Bookstack</title>
         <!-- Materialize CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
         <!-- Google icons -->
@@ -61,7 +61,7 @@
             <ul id="slide-out" class="sidenav sidenav-fixed">
                 <li>
                     <div class="navbar_image">
-                        <img src="static/images/hero_image.png">
+                        <img src="https://ci-ms3-bookstack.s3.eu-west-2.amazonaws.com/hero_image.png">
                     </div>
                 </li>
                 <li>
@@ -127,10 +127,9 @@
             {% endwith %}
 
         </section>
-
         
-            {% block content %}
-            {% endblock %}
+        {% block content %}
+        {% endblock %}
         
         
         

@@ -278,4 +278,19 @@ nav a {
     margin-left: 2.5rem;
 }
 
+.profile-label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
 /* MISC ENDS */
+
+/* HOME PAGE */
+
+.home-img {
+    width: 100%;
+}
+
+#home-body {
+    padding-left: 10px!important;
+}
