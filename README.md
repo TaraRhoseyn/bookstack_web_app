@@ -93,6 +93,9 @@ Bugs found and resolved during development:
 3. **Updating function that stores image to S3**: Adding in an extra argument, 'ACL='public-read'' to the function.
 4. **Updating method of rendering image path on frontend**: Originally, I was pulling the file path data from the database within an iteration method that returned an array of objects. Since there is only 1 unique file path per user, this was unnecessary. Instead of pulling data from the DB to frontend through a function, I went straight through with jinja templating in user_profile.html.  
 
+**Bug 6** - When trying to implement filtering on the dashboard to make sure users can only see books they themselves have added, I ran into the issue of no books at all being rendered after a user has added book/s, despite all data being correct in the database.
+**Solution** - Although my if logic within the jinja template was correct in filtering down to only the user's books, I realised that the conditions I had in the for loop that only display the first three items in loop was causing no books to display. This was because the index was not long enough in my tests to trigger the loop to look for this specific number of items. I removed the loop indexing condition ([0-3]) from the for loop in dashboard.html and the issue was resolved.
+
 
 ## Credits
 
