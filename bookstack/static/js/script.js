@@ -12,9 +12,15 @@ $(document).ready(function () {
 // Toggle form content shown or hidden
 // Credit: Stack Overflow
 // Bug fix: use classList.toggle instead of if/else logic
-$("#read_status").on("click", showFormContent);
+$("#read_status").on("click", showEditBookContent);
 $("#edit_profile_btn").on("click", showFormContent);
+
 function showFormContent(){
   document.getElementById('edit_profile_form').classList.toggle("hidden");
+  
+}
+
+function showEditBookContent(){
+  document.getElementById('extra-content').classList.toggle("hidden");
   
 }

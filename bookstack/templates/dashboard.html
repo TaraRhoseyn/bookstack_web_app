@@ -17,21 +17,23 @@
                     </div>
                     <!-- Display first 3 books -->
                     <div class="card-grid-container">
+                        
                         {% for book in books[0:3] %}
-                            {% if book.is_read == "no" %}
-                                <div class="book-in-card">
-                                    <img class="book-cover"
-                                        src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
-                                        alt="{{ book.book_title }} cover"><br>
-                                    <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
-                                    <p class="book-author">{{ book.book_author }}</p>
-                                    <a href="{{ url_for('books.edit_book', book_id=book._id) }}" class="waves-effect waves-light btn">Edit</a>
-                                </div>
+                            {% if session.user|lower == book.added_by|lower %}
+                                {% if book.is_read == "no" %}
+                                    <div class="book-in-card">
+                                        <img class="book-cover"
+                                            src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
+                                            alt="{{ book.book_title }} cover"><br>
+                                        <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
+                                        <p class="book-author">{{ book.book_author }}</p>
+                                        <a href="{{ url_for('books.edit_book', book_id=book._id) }}" class="waves-effect waves-light btn">Edit</a>
+                                    </div>
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
                         <div class="see-more">
                             <a href="#" class="tooltipped white inner-see-more" data-position="top" data-tooltip="See all books">
-                                
                             </a>
                         </div>
                     </div>
