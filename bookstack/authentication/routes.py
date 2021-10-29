@@ -96,7 +96,9 @@ def edit_profile(username) -> object:
     """
     if request.method == "POST":
         user = mongo.db.users.find_one({"username": username})
+        img_path = util.store_image('user_image')
         editted_profile = {
+            "user_image": img_path,
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }

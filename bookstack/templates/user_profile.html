@@ -6,11 +6,8 @@
         <p><strong>Username: </strong>{{ username }}</p>
         <p><strong>Total books you've read: </strong>{{ books_read }}</p>
         <p><strong>Books you have yet to read: </strong>{{ books_unread }}</p>
-        
-        <!-- the problem: -->
         <img src="{{ user.user_image }}" alt="">
         <button id="edit_profile_btn" class="waves-effect waves-light btn">Edit account</button>
-        
         <a href="{{ url_for('authentication.delete_profile', username=session['user']) }}"
             class="waves-effect waves-light btn red">Delete account</a>
     </div>
@@ -19,7 +16,7 @@
     <div class="container hidden" id="edit_profile_form">
         <h1>Edit profile</h1>
         <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('authentication.edit_profile', username=session['user']) }}">
+            <form enctype="multipart/form-data" class="col s12" method="POST" action="{{ url_for('authentication.edit_profile', username=session['user']) }}">
                 <div class="row">
                     <!-- Username -->
                     <div class="input-field col s12 m6">
@@ -35,8 +32,14 @@
                             pattern="^[a-zA-Z0-9]{5,20}$" required>
                         <label for="password">Password</label>
                     </div>
+                    
                 </div>
                 <div class="row">
+                    <!-- User profile image -->
+                    <div class="input-field col s12">
+                        <div class="profile-label">Your profile picture:</div>
+                        <input type="file" name="user_image" class="form-control validate" id="user_image" value="file" required>
+                    </div>
                     <!-- Submit button -->
                     <button class="btn waves-effect waves-light green lighten-1" id="register-form-btn" type="submit"
                         name="action">Make changes</button>
