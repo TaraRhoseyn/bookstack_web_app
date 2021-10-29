@@ -34,7 +34,7 @@ def add_book() -> object:
         }
         mongo.db.reviews.insert_one(book_for_review)
         flash("Book added!")
-        return redirect(url_for("main.dashboard"))
+        return redirect(url_for("main.dashboard", username=session["user"]))
     return render_template("add_book.html")
 
 
