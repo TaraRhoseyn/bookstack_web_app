@@ -111,6 +111,11 @@ h3 {
     grid: book-in-card;
 }
 
+.book-cover {
+    border: 1px white;
+    border-radius: var(--card-border-radius);
+}
+
 .see-more {
     grid: see-more;
 }
