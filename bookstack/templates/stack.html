@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-
     <main>
-        
-        <h1 class="page-headers">Your stacks</h1>
+        <h1 class="page-headers">Your books:</h1>
         <div class="col s12 grid-card white full-card">
-            <h2>To read:</h2>
             {% for book in books if book.added_by == session.user %}
                 {% if book.is_read == "no" %}
                     <div class="book-in-card">
@@ -15,15 +12,9 @@
                         <p class="book-author">{{ book.book_author }}</p>
                         <a href="{{ url_for('books.edit_book', book_id=book._id) }}"
                             class="waves-effect waves-light btn">Edit</a>
+                        <p>Stack: Books Read</p>
                     </div>
-
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="col s12 grid-card white full-card">
-            <h2>Books you've read:</h2>
-            {% for book in books if book.added_by == session.user %}
-                {% if book.is_read == "yes" %}
+                {% else %}
                     <div class="book-in-card">
                         <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
                             alt="{{ book.book_title }} cover"><br>
@@ -31,11 +22,10 @@
                         <p class="book-author">{{ book.book_author }}</p>
                         <a href="{{ url_for('books.edit_book', book_id=book._id) }}"
                             class="waves-effect waves-light btn">Edit</a>
+                        <p>Stack: Unread Books</p>
                     </div>
                 {% endif %}
             {% endfor %}
         </div>
-
     </main>
-
 {% endblock %}
