@@ -59,58 +59,61 @@
                 </svg>
             </a>
             <ul id="slide-out" class="sidenav sidenav-fixed">
-                <li>
-                    <div class="navbar_image">
-                        <img src="https://ci-ms3-bookstack.s3.eu-west-2.amazonaws.com/hero_image.png">
-                    </div>
-                </li>
-                <li>
-                    <a href="{{ url_for('main.dashboard') }}">
-                        <i class="material-icons navbar-icons">dashboard</i>
-                        Dashboard
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('main.stack') }}">
-                        <i class="material-icons navbar-icons">bookmark</i>
-                        Stacks
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('main.review') }}">
-                        <i class="material-icons navbar-icons">rate_review</i>
-                        Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('main.challenge') }}">
-                        <i class="material-icons navbar-icons">stars</i>
-                        Challenges
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('authentication.user_profile', username=session['user']) }}">
-                        <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
-                        User profile
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('authentication.register') }}">
-                        <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
-                        Register
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('authentication.login') }}">
-                        <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
-                        Log in
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('authentication.logout') }}">
-                        LOG OUT
-                    </a>
-                </li>
+                {% if session['user'] %}
+                    <li>
+                        <div class="navbar_image">
+                            <img src="https://ci-ms3-bookstack.s3.eu-west-2.amazonaws.com/hero_image.png">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('main.dashboard') }}">
+                            <i class="material-icons navbar-icons">dashboard</i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('main.stack') }}">
+                            <i class="material-icons navbar-icons">bookmark</i>
+                            Stacks
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('main.review') }}">
+                            <i class="material-icons navbar-icons">rate_review</i>
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('main.challenge') }}">
+                            <i class="material-icons navbar-icons">stars</i>
+                            Challenges
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('authentication.user_profile', username=session['user']) }}">
+                            <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
+                            User profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('authentication.logout') }}">
+                            LOG OUT
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ url_for('authentication.register') }}">
+                            <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
+                            Register
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('authentication.login') }}">
+                            <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
+                            Log in
+                        </a>
+                    </li>
+                {% endif %}
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </nav>
