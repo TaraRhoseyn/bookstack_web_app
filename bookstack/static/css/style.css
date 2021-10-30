@@ -157,6 +157,23 @@ main {
     font-size: 22px;
 }
 
+.review {
+    font-size: 32px;
+}
+
+.review-title, .review-author {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.review-author {
+    margin-bottom: 20px;
+}
+
+.review-title {
+    font-size: 22px;
+}
+
 /* END GRID LAYOUTS */
 
 /* NAVBAR */

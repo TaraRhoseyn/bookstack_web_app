@@ -98,7 +98,8 @@
                     </li>
                     <li>
                         <a href="{{ url_for('authentication.logout') }}">
-                            LOG OUT
+                            <i class="material-icons navbar-icons" id="user-icon">remove_circle</i>
+                            Log out
                         </a>
                     </li>
                 {% else %}
@@ -141,19 +142,18 @@
             <div class="row footer-row">
                 <div class="col l6 s12">
                     <ul>
-                        <li class="grey-text">Copyright Bookstack 2021</li>
-                        <li class="grey-text">Privacy policy</li>
+                        <li class="grey-text">Copyright &copy; Bookstack 2021</li>
                         <li class="grey-text">
-                            <a href="{{ url_for('main.contact') }}">Contact us</a> 
+                            <a class="grey-text" href="{{ url_for('main.contact') }}">Contact us</a> 
                         </li>
                     </ul>
                 </div>
                 <div class="col l4 offset-l2 s12">
                 <ul>
-                    <li><a class="grey-text" href="#!">Link 1</a></li>
-                    <li><a class="grey-text" href="#!">Link 2</a></li>
-                    <li><a class="grey-text" href="#!">Link 3</a></li>
-                    <li><a class="grey-text" href="#!">Link 4</a></li>
+                    <li><a class="grey-text" href="{{ url_for('main.dashboard') }}">Dashboard</a></li>
+                    <li><a class="grey-text" href="{{ url_for('main.stack') }}">Stacks</a></li>
+                    <li><a class="grey-text" href="{{ url_for('main.review') }}">Reviews</a></li>
+                    <li><a class="grey-text" href="{{ url_for('main.challenge') }}">Challenges</a></li>
                 </ul>
                 </div>
             </div>
