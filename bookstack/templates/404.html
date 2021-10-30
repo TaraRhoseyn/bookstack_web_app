@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Oops!</h1>
-    <h2>We couldn't find what you were looking for.</h2>
-    <button class="btn waves-effect waves-light green lighten-1"><a href="{{ url_for('main.dashboard') }}"> Let's go home</a></button>
+    <div class="center">
+        <h1>Oops!</h1>
+        <h2>We couldn't find what you were looking for.</h2>
+        <button class="btn waves-effect waves-light green lighten-1"><a href="{{ url_for('main.dashboard') }}"> Let's go home</a></button>
+    </div>
 {% endblock %}
