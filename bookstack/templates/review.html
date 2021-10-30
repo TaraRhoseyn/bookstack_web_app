@@ -5,6 +5,9 @@
         <h1 class="page-headers">Reviews</h1>
         <div class="col s12 grid-card white full-card">
             <h2 class="stack-header">Your reviews</h2>
+            <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('reviews.add_review') }}">
+                <i class="material-icons card-icons" aria-describedby="Add new book">add</i>
+            </a>
         </div>
     </main>
 

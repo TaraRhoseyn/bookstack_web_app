@@ -226,7 +226,7 @@ nav a {
     margin-top: 0.5em;
 }
 
-.to-read-stack > a > i {
+.to-read-stack > a > i, .full-card > a > i {
     font-size: 40px!important;
 }
 
