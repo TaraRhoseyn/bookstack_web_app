@@ -59,6 +59,7 @@ Upon realising this I changed my database model to reflect better use of the Mon
 
 - [Figma](https://www.figma.com/) - Used for wireframing.
 - [Freepik](https://www.freepik.com/) - Imagery used in design.
+- [Favicon Generator](https://www.favicon-generator.org/) - Generating Favicon
 
 
 ### Testing resources
