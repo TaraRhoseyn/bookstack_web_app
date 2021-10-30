@@ -30,6 +30,11 @@ h3 {
     margin-left: 10px;
 }
 
+main {
+    min-height: calc(100vh - 34px - 203px);
+}
+
+
 /* GRID LAYOUTS */ 
 
 .grid-container {
@@ -98,6 +103,10 @@ h3 {
         top: 50%;
         height: 100px;
         margin-top: -50px;
+    }
+
+    main {
+        padding-bottom: 10px;
     }
 }
 
