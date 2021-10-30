@@ -33,20 +33,22 @@
                 </div>
                 <!-- Second card -->
                 <div id="second-card" class="col s12 m6 grid-card white">
-                    <h2 class="stack-header">Challenges to finish</h2>
+                    <h2 class="stack-header">Challenge to finish</h2>
                     {% for challenge in challenges if challenge.added_by == session.user %}
                         {% if challenge.is_complete == "no" %}
-                            <div class="challenge-in-card">
-                                <p class="challenge-title"><strong>{{ challenge.challenge_name }}</strong></p>
-                                <a href="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}"
-                                    class="waves-effect waves-light btn">Edit</a>
-                            </div>
+                            {%- if loop.last %}
+                                <div class="challenge-in-card">
+                                    <p class="challenge-title"><strong>{{ challenge.challenge_name }}</strong></p>
+                                    <a href="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}"
+                                        class="waves-effect waves-light btn">Edit</a>
+                                </div>
+                            {% endif %}
                         {% endif %}
                     {% endfor %}
                 </div>
                 <!-- Third card -->
                 <div id="third-card" class="col s12 grid-card white" id="stack-card-full">
-                    <h2 class="stack-header">Your last review:</h2>
+                    <h2 class="stack-header">Your last review</h2>
                     {% for review in reviews if review.added_by == session.user %}
                         {%- if loop.last %}
                             <div class="review-in-card">
