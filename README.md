@@ -74,27 +74,30 @@ Upon realising this I changed my database model to reflect better use of the Mon
 
 Bugs found and resolved during development:
 
-- **Bug 1**: When rendering user information to the user_profile template, the data for the number of books users had read or not read was causing an error due to the data being a cursor Object. 
+**Bug 1**: When rendering user information to the user_profile template, the data for the number of books users had read or not read was causing an error due to the data being a cursor Object. 
 - **Solution**: I researched the topic on Stack Overflow I converted the cursor Object into a dictionary to then loop over and append to existing variable, which is where the data is displayed from. 
 
-- **Bug 2**: When updating your username and password in the user_profile template, the data would be successfully updated in the database but not in the variables stored that displayed the data to the frontend. So you would change your username, but the username you'd see at the top of the user_profile template would remain the same.
+**Bug 2**: When updating your username and password in the user_profile template, the data would be successfully updated in the database but not in the variables stored that displayed the data to the frontend. So you would change your username, but the username you'd see at the top of the user_profile template would remain the same.
 - **Solution**: Removing the render_template that kept users on the same page and updated the flask session (using session.pop()) to allow the browser to refresh session user upon the user re-logging in with their new credentials.
 
-- **Bug 3**: When submitting the user registration form, a 400 Bad Request exception would be raised on keyerror 'user_image', preventing the POST form from being submitted.
+**Bug 3**: When submitting the user registration form, a 400 Bad Request exception would be raised on keyerror 'user_image', preventing the POST form from being submitted.
 - **Solution**: Fixed by adding in a name attribute onto the form elements that I had mistakenly left off. 
 
-- **Bug 4**: Again when submitting the user registration form, a botocore exception (No Credentials Error) would be raised, preventing form submission.
+**Bug 4**: Again when submitting the user registration form, a botocore exception (No Credentials Error) would be raised, preventing form submission.
 - **Solution**: I was using the incorrect variable names for the access keys.
 
-- **Bug 5**: When submitting a profile picture in the registration form (using Boto and AWS), the image would successfully be sent the AWS s3 bucket and the filepath would successfully be stored in the 'user_image' key within my Mongo database. However, I could not get the file path displaying back to the user on the frontend. 
+**Bug 5**: When submitting a profile picture in the registration form (using Boto and AWS), the image would successfully be sent the AWS s3 bucket and the filepath would successfully be stored in the 'user_image' key within my Mongo database. However, I could not get the file path displaying back to the user on the frontend. 
 - **Solution**: This was the most complex bug to solve in the project. It involved many hours of research into AWS policies and outreach support from the Code Institute support team. The bug was fixed following this process:
 1. **Updating S3 Bucket policy**: Updating value of the key 'Sid' to 'AllowPublicRead', updating the value of key 'Principle' from being IAM-user based to general.
 2. **Updating S3 ACL policy**: Allowing full access to all global users (public access)
 3. **Updating function that stores image to S3**: Adding in an extra argument, 'ACL='public-read'' to the function.
 4. **Updating method of rendering image path on frontend**: Originally, I was pulling the file path data from the database within an iteration method that returned an array of objects. Since there is only 1 unique file path per user, this was unnecessary. Instead of pulling data from the DB to frontend through a function, I went straight through with jinja templating in user_profile.html.  
 
-- **Bug 6**: When trying to implement filtering on the dashboard to make sure users can only see books they themselves have added, I ran into the issue of no books at all being rendered after a user has added book/s, despite all data being correct in the database.
+**Bug 6**: When trying to implement filtering on the dashboard to make sure users can only see books they themselves have added, I ran into the issue of no books at all being rendered after a user has added book/s, despite all data being correct in the database.
 - **Solution**: Although my if logic within the jinja template was correct in filtering down to only the user's books, I realised that the conditions I had in the for loop that only display the first three items in loop was causing no books to display. This was because the index was not long enough in my tests to trigger the loop to look for this specific number of items. I removed the loop indexing condition ([0-3]) from the for loop in dashboard.html and the issue was resolved.
+
+**Bug 7**: When trying to display both read and unread books to the user in stack.html, my method of displaying the unread books was not rendering the data from the database despite all correct key and value names. 
+- **Solution**: My original method was to use two *for* loops to iterate over the 'books' dictionary in the database and in each *for* loop have an *if* statement that found either books marked as read or unread. I realised that having two iterating methods was not going to work, as the dictionary was already being unpacked by the first so the second didn't have anything to iterate over. I adjusted my design to make only one *for* loop work. Now in this *for* loop there's one *if* statement that has an *else* condition that can correctly display unread books to the user. 
 
 
 ## Credits
