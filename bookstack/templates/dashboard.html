@@ -21,14 +21,18 @@
                             {% if book.is_read == "no" %}
                             <!-- Credit for looping method: Ansible -->
                                 {%- if loop.first %}
-                                    <div class="book-in-card">
-                                        <img class="book-cover"
+                                    <div class="book-in-card row">
+                                        <div class="col s12 m4">
+                                            <img class="book-cover"
                                             src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-M.jpg"
-                                            alt="{{ book.book_title }} cover"><br>
-                                        <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
-                                        <p class="book-author">{{ book.book_author }}</p>
-                                        <a href="{{ url_for('books.edit_book', book_id=book._id) }}" 
-                                            class="edit-button green lighten-3 waves-effect waves-light btn-small">Edit</a>
+                                            alt="{{ book.book_title }} cover">
+                                        </div>
+                                        <div class="col s12 m8">
+                                            <h3 class="book-title"><strong>{{ book.book_title }}</strong></h3>
+                                            <p class="book-author">{{ book.book_author }}</p>
+                                            <a href="{{ url_for('books.edit_book', book_id=book._id) }}" 
+                                            class="edit-button book-button green lighten-3 waves-effect waves-light btn-small">Edit</a>
+                                        </div>
                                     </div>
                                 {% endif %}
                             {% endif %}
