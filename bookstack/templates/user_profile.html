@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
     <div class="container">
         <h1>{{ username }}'s Profile</h1>
         <p><strong>Username: </strong>{{ username }}</p>
@@ -11,7 +10,6 @@
         <a href="{{ url_for('authentication.delete_profile', username=session['user']) }}"
             class="waves-effect waves-light btn red">Delete account</a>
     </div>
-   
     <!-- Edit profile form -->
     <div class="container hidden" id="edit_profile_form">
         <h1>Edit profile</h1>
@@ -48,5 +46,4 @@
             </form>
         </div>
     </div>
-
 {% endblock %}

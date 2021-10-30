@@ -1,24 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <main>
-        <h1 class="page-headers">Challenges</h1>
-        <div class="col s12 grid-card white full-card">
-            <h2 class="stack-header">Your challenges</h2>
-            <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new challenge" href="{{ url_for('challenges.add_challenge') }}">
-                <i class="material-icons card-icons" aria-describedby="Add new Challenge">add</i>
-            </a>
-            {% for challenge in challenges if challenge.added_by == session.user %}
-                <div class="challenge-in-card">
-                    <p class="challenge-title"><strong>{{ challenge.challenge_name }}</strong></p>
-                    <a href="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}"
-                        class="waves-effect waves-light btn">Edit</a>
-                    {% if challenge.is_complete == "yes" %}
-                        <p>Challenge complete</p>
-                    {% endif %}
-                </div>
-            {% endfor %}
-        </div>
-    </main>
-
+    <h1 class="page-headers">Challenges</h1>
+    <div class="col s12 grid-card white full-card">
+        <h2 class="stack-header">Your challenges</h2>
+        <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new challenge" href="{{ url_for('challenges.add_challenge') }}">
+            <i class="material-icons card-icons" aria-describedby="Add new Challenge">add</i>
+        </a>
+        {% for challenge in challenges if challenge.added_by == session.user %}
+            <div class="challenge-in-card">
+                <p class="challenge-title"><strong>{{ challenge.challenge_name }}</strong></p>
+                <a href="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}"
+                    class="waves-effect waves-light btn">Edit</a>
+                {% if challenge.is_complete == "yes" %}
+                    <p>Challenge complete</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
