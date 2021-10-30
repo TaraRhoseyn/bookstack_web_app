@@ -19,6 +19,7 @@
                     <div class="card-grid-container">
                         {% for book in books if book.added_by == session.user %}
                             {% if book.is_read == "no" %}
+                            <!-- Credit for looping method: Ansible -->
                                 {%- if loop.first %}
                                     <div class="book-in-card">
                                         <img class="book-cover"

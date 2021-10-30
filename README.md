@@ -110,6 +110,7 @@ Bugs found and resolved during development:
 - **Angela Delise** - For informing [responsive CSS grid layout](https://www.youtube.com/watch?v=68O6eOGAGqA) best practices.
 - **W3 Docs** - For [vertical alignments](https://www.w3docs.com/snippets/css/how-to-vertically-align-elements-in-a-div.html) of elements.
 - **Corey Schafer** - For [Blueprints and Configuration guidance for codebase structure](https://www.youtube.com/watch?v=Wfx4YBzg16s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12)
+- **Ansible** - For [indexing loop methods](https://ansiblemaster.wordpress.com/2016/07/27/jinja2-using-loop-index-and-loop-length-examples-etchosts-and-workers-properties/) that allows me to only display to the user the first/last item in dicts on dashboard.html
 
 
 ### Media
