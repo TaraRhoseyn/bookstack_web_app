@@ -17,7 +17,8 @@ def add_challenge() -> object:
     if request.method == "POST":
         challenge = {
             "challenge_name": request.form.get("challenge_name"),
-            "added_by": session["user"]
+            "added_by": session["user"],
+            "is_complete": "no"
         }
         mongo.db.challenges.insert_one(challenge)
         flash("Challenge added!")

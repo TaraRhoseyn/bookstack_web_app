@@ -7,7 +7,7 @@
                 <!-- First card -->
                 <div id="first-card" class="col s12 m6 white grid-card" id="stack-card-left">
                     <div class="to-read-stack">
-                        <h2 class="stack-header">To read</h2>
+                        <h2 class="stack-header">Books to read</h2>
                         <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('books.add_book') }}">
                             <i class="material-icons card-icons" aria-describedby="Add new book">add</i>
                         </a>
@@ -33,21 +33,29 @@
                 </div>
                 <!-- Second card -->
                 <div id="second-card" class="col s12 m6 grid-card white">
-                    <h2 class="stack-header">Challenges</h2>
+                    <h2 class="stack-header">Challenges to finish</h2>
                     {% for challenge in challenges if challenge.added_by == session.user %}
-                <div class="challenge-in-card">
-                    <p class="challenge-title"><strong>{{ challenge.challenge_name }}</strong></p>
-                    <a href="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}"
-                        class="waves-effect waves-light btn">Edit</a>
-                    {% if challenge.is_complete == "yes" %}
-                        <p>Challenge complete</p>
-                    {% endif %}
-                </div>
-            {% endfor %}
+                        {% if challenge.is_complete == "no" %}
+                            <div class="challenge-in-card">
+                                <p class="challenge-title"><strong>{{ challenge.challenge_name }}</strong></p>
+                                <a href="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}"
+                                    class="waves-effect waves-light btn">Edit</a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <!-- Third card -->
                 <div id="third-card" class="col s12 grid-card white" id="stack-card-full">
                     <h2 class="stack-header">Reviews</h2>
+                    {% for review in reviews if review.added_by == session.user %}
+                        <div class="review-in-card">
+                            <p class="review-title"><strong>{{ review.book_title }}</strong></p>
+                            <p class="review-author">{{ review.book_author }}</p>
+                            <p class="review"><em>"{{ review.book_review }}"</em></p>
+                            <a href="{{ url_for('reviews.edit_review', review_id=review._id) }}"
+                                class="waves-effect waves-light btn">Edit</a>
+                        </div>
+                    {% endfor %}
                 </div>
         </section>
     </main>
