@@ -27,7 +27,6 @@ h2 {
 
 h3 {
     font-size: 1rem;
-    margin-left: 10px;
 }
 
 main {
@@ -66,7 +65,14 @@ main {
 @media only screen and (min-width: 501px) {
     .book-cover {
         height: 100px;
-        margin-left: 10px;
+    }
+
+    .edit-button {
+        margin-bottom: 20px;
+    }
+
+    .challenge-in-card, .book-in-card, .review-in-card {
+        margin-left: 20px;
     }
 }
 
@@ -193,7 +199,6 @@ nav a {
 /* NAVBAR ENDS */
 
 .book-author {
-    margin-left: 10px;
     margin-top: 2px;
 }
 
@@ -274,6 +279,7 @@ nav a {
 
 .edit-button {
     color: black;
+    margin-left: 
 }
 
 /* MISC ENDS */
