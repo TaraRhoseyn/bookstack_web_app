@@ -59,7 +59,7 @@ def delete_review(review_id) -> object:
     from the reviews collection.
     :return url_for of main.dashboard
     """
-    mongo.db.books.remove({"_id": ObjectId(review_id)})
+    mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash(
         "Review removed. To remove the book from your stacks, please visit the Stacks page.")
     return redirect(url_for("main.dashboard"))
