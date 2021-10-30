@@ -119,8 +119,6 @@
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </nav>
-        
-
         <section>
             <!-- Flashed messages -->
             {% with messages = get_flashed_messages() %}
@@ -130,7 +128,6 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-
         </section>
         <main>
             {% block content %}
