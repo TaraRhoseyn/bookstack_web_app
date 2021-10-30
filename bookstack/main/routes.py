@@ -28,6 +28,13 @@ def review():
         "review.html", reviews=reviews)
 
 
+@main.route("/challenge")
+def challenge():
+    challenges = mongo.db.challenges.find()
+    return render_template(
+        "challenge.html", challenges=challenges)
+
+
 @main.route("/contact")
 def contact():
     return render_template("contact.html")
