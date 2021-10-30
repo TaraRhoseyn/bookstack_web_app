@@ -10,11 +10,20 @@ main = Blueprint('main', __name__)
 @main.route("/")
 @main.route("/home")
 def home():
+    """
+    This function renders the home page
+    for users not with an account/logged in
+    :return render_template of home.html
+    """
     return render_template("home.html")
 
 
 @main.route("/dashboard")
 def dashboard():
+    """
+    This function renders the main page, dashboard
+    :return render_template of dashboard.html
+    """
     books = mongo.db.books.find()
     reviews = mongo.db.reviews.find()
     return render_template(
@@ -23,6 +32,10 @@ def dashboard():
 
 @main.route("/review")
 def review():
+    """
+    This function renders the main reviews page
+    :return render_template of review.html
+    """
     reviews = mongo.db.reviews.find()
     return render_template(
         "review.html", reviews=reviews)
@@ -30,6 +43,10 @@ def review():
 
 @main.route("/challenge")
 def challenge():
+    """
+    This function renders the main challenges page
+    :return render_template of challenge.html
+    """
     challenges = mongo.db.challenges.find()
     return render_template(
         "challenge.html", challenges=challenges)
@@ -37,4 +54,8 @@ def challenge():
 
 @main.route("/contact")
 def contact():
+    """
+    This function renders the contact us page
+    :return render_template of contact.html
+    """
     return render_template("contact.html")
