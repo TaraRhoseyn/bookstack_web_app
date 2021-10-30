@@ -52,6 +52,17 @@ def challenge():
         "challenge.html", challenges=challenges)
 
 
+@main.route("/stack")
+def stack():
+    """
+    This function renders the main stacks
+    :return render_template of stack.html
+    """
+    books = mongo.db.books.find()
+    return render_template(
+        "stack.html", books=books)
+
+
 @main.route("/contact")
 def contact():
     """
