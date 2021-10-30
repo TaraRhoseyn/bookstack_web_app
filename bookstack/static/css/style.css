@@ -143,8 +143,12 @@ h3 {
 .see-more {
     grid: see-more;
 }
-/* Credit for vertical alignment: W3 Docs */
 
+.full-card {
+    margin: 40px;
+    box-shadow: var(--card-box-shadow);
+    border-radius: var(--card-border-radius);
+}
 
 .card-icon-see-more {
     font-size: 30px;

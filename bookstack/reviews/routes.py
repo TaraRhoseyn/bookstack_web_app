@@ -7,6 +7,7 @@ from bookstack import mongo
 
 reviews = Blueprint('reviews', __name__)
 
+
 @reviews.route("/add_review", methods=["GET", "POST"])
 def add_review() -> object:
     """

@@ -17,7 +17,6 @@
                     </div>
                     <!-- Display first 3 books -->
                     <div class="card-grid-container">
-                        
                         {% for book in books if book.added_by == session.user %}
                             {% if book.is_read == "no" %}
                                 <div class="book-in-card">
@@ -30,10 +29,6 @@
                                 </div>
                             {% endif %}
                         {% endfor %}
-                        <div class="see-more">
-                            <a href="#" class="tooltipped white inner-see-more" data-position="top" data-tooltip="See all books">
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <!-- Second card -->
