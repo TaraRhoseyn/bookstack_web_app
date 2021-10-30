@@ -43,7 +43,7 @@ def edit_review(review_id) -> object:
             "book_title": request.form.get("book_title"),
             "book_author": request.form.get("book_author"),
             "added_by": session["user"],
-            "Review": request.form.get("book_review")
+            "book_review": request.form.get("book_review")
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, editted_review)
         flash("Review editted!")
