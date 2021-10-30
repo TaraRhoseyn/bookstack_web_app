@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="row">
+        <div class="container">
+            <h1>Add challenge</h1>
+        </div>
+        <form class="col s12" method="POST" action="{{ url_for('challenges.edit_challenge', challenge_id=challenge._id) }}">
+            <div class="container">
+                <!-- Book title -->
+                <div class="input-field col s12">
+                    <input type="text" name="challenge_name" id="challenge_name" class="validate" minlength="2"
+                        required>
+                    <label for="challenge_name">Your challenge</label>
+                </div>
+                <!-- Switch -->
+                <div class="switch">
+                    <label for="completed_status">
+                        <input type="checkbox" id="completed_status" name="completed_status">
+                        <input type="checkbox" id="completed_status" name="completed_status">
+                        Not done yet
+                        <span class="lever"></span>
+                        Completed
+                    </label>
+                </div>
+                <!-- Submit button-->
+                <button class="btn waves-effect waves-light green" id="edit_challenge" type="submit"
+                    name="action">Edit challenge</button>
+                    <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light red">Cancel changes</a>
+                    <a href="{{ url_for('challenges.delete_challenge', challenge_id=challenge._id) }}" class="waves-effect waves-light btn">Delete challenge</a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
