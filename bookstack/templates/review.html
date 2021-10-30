@@ -8,6 +8,13 @@
             <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('reviews.add_review') }}">
                 <i class="material-icons card-icons" aria-describedby="Add new book">add</i>
             </a>
+            {% for review in reviews if review.added_by == session.user %}
+                <div class="review-in-card">
+                    <p class="review-title"><strong>{{ review.book_title }}</strong></p>
+                    <p class="review-author">{{ review.book_author }}</p>
+                    <p class="review"><em>"{{ review.book_review }}"</em></p>
+                </div>
+            {% endfor %}
         </div>
     </main>
 

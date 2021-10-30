@@ -43,13 +43,13 @@ def edit_review(review_id) -> object:
             "book_title": request.form.get("book_title"),
             "book_author": request.form.get("book_author"),
             "added_by": session["user"],
-            "book_review": request.form.get("book_review")
+            "Review": request.form.get("book_review")
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, editted_review)
         flash("Review editted!")
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    return render_template("edit_review.html", reivew=review)
+    return render_template("edit_review.html", review=review)
 
 
 @reviews.route("/delete_review/<review_id>")
