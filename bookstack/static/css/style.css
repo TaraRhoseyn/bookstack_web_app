@@ -367,6 +367,12 @@ nav a {
 
 #home-body {
     padding-left: 10px!important;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.home-cont {
+    margin-top: 50px;
 }
 
 /* HOME PAGE ENDS */
