@@ -11,7 +11,7 @@
                         <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('books.add_book') }}">
                             <i class="material-icons card-icons" aria-describedby="Add new book">add</i>
                         </a>
-                        <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all books" href="{{ url_for('books.add_book') }}">
+                        <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all books" href="{{ url_for('main.stack') }}">
                             <i class="material-icons card-icon-see-more" aria-describedby="See all books">more_horiz</i>
                         </a>
                     </div>
@@ -37,6 +37,12 @@
                 <!-- Second card -->
                 <div id="second-card" class="col s12 m6 grid-card white">
                     <h2 class="stack-header">Challenge to finish</h2>
+                    <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new challenge" href="{{ url_for('challenges.add_challenge') }}">
+                        <i class="material-icons card-icons" aria-describedby="Add new challenge">add</i>
+                    </a>
+                    <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all challenges" href="{{ url_for('main.challenge') }}">
+                        <i class="material-icons card-icon-see-more" aria-describedby="See all challenges">more_horiz</i>
+                    </a>
                     {% for challenge in challenges if challenge.added_by == session.user %}
                         {% if challenge.is_complete == "no" %}
                             {%- if loop.last %}
@@ -52,6 +58,11 @@
                 <!-- Third card -->
                 <div id="third-card" class="col s12 grid-card white" id="stack-card-full">
                     <h2 class="stack-header">Your last review</h2>
+                    <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new review" href="{{ url_for('reviews.add_review') }}">
+                        <i class="material-icons card-icons" aria-describedby="Add new review">add</i>
+                    </a>
+                    <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all reviews" href="{{ url_for('main.review') }}">
+                        <i class="material-icons card-icon-see-more" aria-describedby="See all reviews">more_horiz</i></a>
                     {% for review in reviews if review.added_by == session.user %}
                         {%- if loop.last %}
                             <div class="review-in-card">

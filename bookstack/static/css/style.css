@@ -205,13 +205,13 @@ nav a {
     display: inline;
 }
 
-.to-read-stack > a {
+.to-read-stack > a, .full-card > a, .grid-card > a {
     margin-left: auto;
     margin-right: 0.5em;
     margin-top: 0.5em;
 }
 
-.to-read-stack > a > i, .full-card > a > i {
+.to-read-stack > a > i, .full-card > a > i, .grid-card > a > i {
     font-size: 40px!important;
 }
 
