@@ -2,6 +2,15 @@
 
 ![Responsive mockup of website](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/images/docs/readme/responsive-mockup.png)
 
+[View the live project](https://bookstack-ms3.herokuapp.com/)
+
+**User credentials**
+
+To use the website you can either create an account and build your stacks, or use these following user tester credentials:
+
+- Username: TestAccount
+- Password: Test1234
+
 ## Table of Content
 
 ## Project Goals
