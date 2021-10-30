@@ -318,6 +318,11 @@ nav a {
     margin-left: 
 }
 
+.user-image {
+    width: 100%;
+    border-radius: 20%;
+}
+
 /* MISC ENDS */
 
 /* HOME PAGE */
