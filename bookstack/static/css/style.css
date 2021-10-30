@@ -77,7 +77,8 @@ main {
         margin-bottom: 20px;
     }
 
-    .challenge-in-card, .book-in-card, .review-in-card {
+    .challenge-in-card, .review-in-page,
+    .book-in-card, .review-in-card {
         margin-left: 20px;
     }
 }
@@ -181,7 +182,7 @@ main {
     font-size: 22px;
 }
 
-.review {
+.review, .review-in-page {
     font-size: 32px;
 }
 
