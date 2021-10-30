@@ -3,9 +3,9 @@
 
     <div class="row">
         <div class="container">
-            <h1>Add review</h1>
+            <h1>Edit review</h1>
         </div>
-        <form class="col s12" method="POST" action="{{ url_for('reviews.add_review') }}">
+        <form class="col s12" method="POST" action="{{ url_for('reviews.edit_review', review_id=review._id) }}">
             <div class="container">
                 <!-- Book title -->
                 <div class="input-field col s12">
@@ -26,8 +26,10 @@
                     <label for="book_review">Book review</label>
                 </div>
                 <!-- Submit button-->
-                <button class="btn waves-effect waves-light green" id="add_review" type="submit"
-                    name="action">Add review</button>
+                <button class="btn waves-effect waves-light green" id="edot_review" type="submit"
+                    name="action">Edit review</button>
+                    <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light red">Cancel changes</a>
+                <a href="{{ url_for('reviews.delete_review', review_id=review._id) }}" class="waves-effect waves-light btn">Delete review</a>
             </div>
         </form>
     </div>

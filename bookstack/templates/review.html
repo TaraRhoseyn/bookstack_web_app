@@ -13,6 +13,8 @@
                     <p class="review-title"><strong>{{ review.book_title }}</strong></p>
                     <p class="review-author">{{ review.book_author }}</p>
                     <p class="review"><em>"{{ review.book_review }}"</em></p>
+                    <a href="{{ url_for('reviews.edit_review', review_id=review._id) }}"
+                        class="waves-effect waves-light btn">Edit</a>
                 </div>
             {% endfor %}
         </div>

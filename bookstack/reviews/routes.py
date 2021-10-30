@@ -53,7 +53,7 @@ def edit_review(review_id) -> object:
 
 
 @reviews.route("/delete_review/<review_id>")
-def delete_book(review_id) -> object:
+def delete_review(review_id) -> object:
     """
     This function deletes review documents
     from the reviews collection.
