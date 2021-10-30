@@ -82,24 +82,7 @@ h3 {
     border-radius: var(--card-border-radius);
 }
 
-.card-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-        "book-in-card book-in-card book-in-card see-more";
-}
 @media only screen and (max-width: 1141px) {
-    .card-grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0.4fr;
-        grid-template-areas: 
-            "book-in-card book-in-card book-in-card"
-            "see-more see-more see-more";
-        text-align: center;
-    }
-
     .inner-see-more {
         margin-left: 125%;
     }
@@ -119,18 +102,6 @@ h3 {
 }
 
 @media only screen and (max-width: 700px) {
-    .card-grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 0.4fr;
-        grid-template-areas: 
-            "book-in-card"
-            "book-in-card" 
-            "book-in-card"
-            "see-more";
-        text-align: center;
-    }
-
     .inner-see-more {
         margin-left: 1%;
     }
