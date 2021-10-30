@@ -129,6 +129,12 @@ main {
     }
 }
 
+.flash-msg {
+    margin-left: 20px;
+    font-size: 30px;
+    color: red;
+}
+
 .book-in-card {
     grid: book-in-card;
 }
