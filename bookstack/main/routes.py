@@ -21,6 +21,13 @@ def dashboard():
         "dashboard.html", books=books, reviews=reviews)
 
 
+@main.route("/review")
+def review():
+    reviews = mongo.db.reviews.find()
+    return render_template(
+        "review.html", reviews=reviews)
+
+
 @main.route("/contact")
 def contact():
     return render_template("contact.html")

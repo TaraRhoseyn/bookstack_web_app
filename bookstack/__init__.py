@@ -22,10 +22,12 @@ def create_app():
     from bookstack.errors.routes import errors
     from bookstack.books.routes import books
     from bookstack.main.routes import main
+    from bookstack.reviews.routes import reviews
     # Register routes with app
     app.register_blueprint(authentication)
     app.register_blueprint(errors)
     app.register_blueprint(books)
+    app.register_blueprint(reviews)
     app.register_blueprint(main)
     # Return app
     return app
