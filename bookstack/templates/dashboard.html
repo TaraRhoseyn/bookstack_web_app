@@ -46,15 +46,17 @@
                 </div>
                 <!-- Third card -->
                 <div id="third-card" class="col s12 grid-card white" id="stack-card-full">
-                    <h2 class="stack-header">Reviews</h2>
+                    <h2 class="stack-header">Your last review:</h2>
                     {% for review in reviews if review.added_by == session.user %}
-                        <div class="review-in-card">
-                            <p class="review-title"><strong>{{ review.book_title }}</strong></p>
-                            <p class="review-author">{{ review.book_author }}</p>
-                            <p class="review"><em>"{{ review.book_review }}"</em></p>
-                            <a href="{{ url_for('reviews.edit_review', review_id=review._id) }}"
-                                class="waves-effect waves-light btn">Edit</a>
-                        </div>
+                        {%- if loop.last %}
+                            <div class="review-in-card">
+                                <p class="review-title"><strong>{{ review.book_title }}</strong></p>
+                                <p class="review-author">{{ review.book_author }}</p>
+                                <p class="review"><em>"{{ review.book_review }}"</em></p>
+                                <a href="{{ url_for('reviews.edit_review', review_id=review._id) }}"
+                                    class="waves-effect waves-light btn">Edit</a>
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
         </section>
