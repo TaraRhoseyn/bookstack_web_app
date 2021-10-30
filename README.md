@@ -1,5 +1,7 @@
 # Bookstacks
 
+![Responsive mockup of website](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/images/docs/readme/responsive-mockup.png)
+
 ## Table of Content
 
 ## Project Goals
@@ -21,7 +23,7 @@
 
 **Original database model**
 
-![Original database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/og_database_model.PNG)
+![Original database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/images/docs/readme/og_database_model.PNG)
 
 The model above was my original intention for the schema of the database used for the project. Due to need for foreign keys I realised this schema would be better deployed using a relational database rather than a NoSQL document-based database that I was using for this project. 
 
