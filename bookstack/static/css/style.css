@@ -274,3 +274,16 @@ nav a {
 #home-body {
     padding-left: 10px!important;
 }
+
+/* HOME PAGE ENDS */
+
+/* FOOTER */
+
+.page-footer {
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-row {
+    margin-bottom: 0px;
+}
