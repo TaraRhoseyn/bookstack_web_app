@@ -33,10 +33,10 @@
                     </label>
                 </div>
                 <p>Please note: To update your review of this book, head over to Reviews.</p>
-                <button class="btn waves-effect waves-light green" id="add_book" type="submit"
-                    name="action">Edit book</button>
-                <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light red">Cancel changes</a>
-                <a href="{{ url_for('books.delete_book', book_id=book._id) }}" class="waves-effect waves-light btn">Delete book</a>
+                <button class="stack-btn edit-button green lighten-3 waves-effect waves-light btn" id="add_book" type="submit"
+                    name="action">Submit changes</button>
+                <a href="{{ url_for('main.dashboard') }}" class="btn">Cancel changes</a>
+                <a href="{{ url_for('books.delete_book', book_id=book._id) }}" class="waves-effect waves-light btn red">Delete book</a>
                 </div>
             </div>
         </form>

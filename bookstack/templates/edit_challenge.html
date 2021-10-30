@@ -22,10 +22,10 @@
                     </label>
                 </div>
                 <!-- Submit button-->
-                <button class="btn waves-effect waves-light green" id="edit_challenge" type="submit"
+                <button class="stack-btn green waves-effect waves-light btn" id="edit_challenge" type="submit"
                     name="action">Edit challenge</button>
-                    <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light red">Cancel changes</a>
-                    <a href="{{ url_for('challenges.delete_challenge', challenge_id=challenge._id) }}" class="waves-effect waves-light btn">Delete challenge</a>
+                    <a href="{{ url_for('main.dashboard') }}" class="stack-btn btn waves-effect waves-light">Cancel changes</a>
+                    <a href="{{ url_for('challenges.delete_challenge', challenge_id=challenge._id) }}" class="stack-btn waves-effect waves-light btn red">Delete challenge</a>
             </div>
         </form>
     </div>
