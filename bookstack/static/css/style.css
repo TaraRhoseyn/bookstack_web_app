@@ -137,10 +137,34 @@ main {
     border-radius: var(--card-border-radius);
 }
 
-.
+.stack-cover {
+    margin-top: 20px;
+    border-radius: var(--card-border-radius);
+}
 
-.see-more {
-    grid: see-more;
+.stack-title {
+    font-size: 22px;
+    margin-bottom: 1px;
+}
+
+.stack-author {
+    margin: 1px;
+}
+
+.stack-unread-red {
+    color: red;
+}
+
+.stack-unread-grn {
+    color: green;
+}
+
+.red-icon {
+    color: red!important;
+}
+
+.grn-icon {
+    color: green!important;
 }
 
 .full-card {
@@ -315,7 +339,10 @@ nav a {
 
 .edit-button {
     color: black;
-    margin-left: 
+}
+
+.stack-btn {
+    margin-top: 15px;
 }
 
 .user-image {
