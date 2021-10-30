@@ -59,6 +59,7 @@
                 </svg>
             </a>
             <ul id="slide-out" class="sidenav sidenav-fixed">
+                <!-- Shows user data only if user is logged in -->
                 {% if session['user'] %}
                     <li>
                         <div class="navbar_image">
@@ -130,12 +131,11 @@
             {% endwith %}
 
         </section>
-        
-        {% block content %}
-        {% endblock %}
-        
-        
-    <!-- Footer. Credit: Materialize-->
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <!-- Footer. Credit: Materialize-->
         <footer class="page-footer white">
             <div class="container-fluid">
             <div class="row footer-row">
