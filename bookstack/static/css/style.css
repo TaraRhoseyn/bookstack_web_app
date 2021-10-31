@@ -33,6 +33,9 @@ main {
     min-height: calc(100vh - 34px - 203px);
 }
 
+label {
+    color: black;
+}
 
 /* GRID LAYOUTS */ 
 
