@@ -1,4 +1,4 @@
-# Bookstacks
+# Bookstack
 
 ![Responsive mockup of website](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/images/docs/readme/responsive-mockup.png)
 
