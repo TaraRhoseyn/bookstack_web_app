@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
     <div class="row">
         <div class="container">
             <h1>Add book</h1>
@@ -39,13 +38,12 @@
                     <!-- Book review -->
                     <div class="input-field col s12">
                         <textarea id="book_review" name="book_review" class="materialize-textarea validate" minlength="2"
-                        pattern="^[0-9]{2,50}$"></textarea>
+                            ></textarea>
                         <label for="book_review">Book review</label>
                     </div>
                 </div>
                 <button class="btn waves-effect waves-light green" id="add_book" type="submit"
                     name="action">Add book</button>
-                </div>
             </div>
         </form>
     </div>
