@@ -98,26 +98,26 @@
                     </li>
                     <li>
                         <a href="{{ url_for('authentication.user_profile', username=session['user']) }}">
-                            <i class="material-icons navbar-icons" id="user-icon">person_pin</i>
+                            <i class="material-icons navbar-icons">person_pin</i>
                             User profile
                         </a>
                     </li>
                     <li>
                         <a href="{{ url_for('authentication.logout') }}">
-                            <i class="material-icons navbar-icons" id="user-icon">remove_circle</i>
+                            <i class="material-icons navbar-icons">remove_circle</i>
                             Log out
                         </a>
                     </li>
                 {% else %}
                     <li>
                         <a href="{{ url_for('authentication.register') }}">
-                            <i class="material-icons navbar-icons" id="user-icon">person_add</i>
+                            <i class="material-icons navbar-icons">person_add</i>
                             Register
                         </a>
                     </li>
                     <li>
                         <a href="{{ url_for('authentication.login') }}">
-                            <i class="material-icons navbar-icons" id="user-icon">person</i>
+                            <i class="material-icons navbar-icons">person</i>
                             Log in
                         </a>
                     </li>
@@ -125,7 +125,6 @@
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </nav>
-        <section>
             <!-- Flashed messages -->
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
@@ -134,7 +133,6 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-        </section>
         <main>
             {% block content %}
             {% endblock %}
