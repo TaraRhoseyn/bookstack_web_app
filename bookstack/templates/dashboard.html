@@ -66,10 +66,10 @@
             <div id="third-card" class="col s12 grid-card white">
                 <h2 class="stack-header">Your last review</h2>
                 <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new review" href="{{ url_for('reviews.add_review') }}">
-                    <i class="material-icons card-icons" aria-label="Add new review">add</i>
+                    <i class="material-icons card-icons">add</i>
                 </a>
                 <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all reviews" href="{{ url_for('main.review') }}">
-                    <i class="material-icons card-icon-see-more" aria-label="See all reviews">more_horiz</i></a>
+                    <i class="material-icons card-icon-see-more">more_horiz</i></a>
                 {% for review in reviews if review.added_by == session.user %}
                     {%- if loop.last %}
                         <div class="review-in-card">
