@@ -15,7 +15,7 @@
                 <!-- Book author -->
                 <div class="input-field col s12">
                     <input type="text" name="book_author" id="book_author" class="validate" minlength="5"
-                        value="{{ book.book_author }}"required>
+                        value="{{ book.book_author }}" required>
                     <label for="book_author">Book author</label>
                 </div>
                 <div class="input-field col s12">
@@ -37,10 +37,7 @@
                     name="action">Submit changes</button>
                 <a href="{{ url_for('main.dashboard') }}" class="btn">Cancel changes</a>
                 <a href="{{ url_for('books.delete_book', book_id=book._id) }}" class="waves-effect waves-light btn red">Delete book</a>
-                </div>
             </div>
         </form>
     </div>
-    
-
 {% endblock %}
