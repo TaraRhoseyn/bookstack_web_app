@@ -70,7 +70,8 @@ Upon realising this I changed my database model to reflect better use of the Mon
 
 - [Figma](https://www.figma.com/) - Used for wireframing.
 - [Freepik](https://www.freepik.com/) - Imagery used in design.
-- [Favicon Generator](https://www.favicon-generator.org/) - Generating Favicon
+- [Favicon Generator](https://www.favicon-generator.org/) - Generating Favicon.
+- [Canva](https://www.canva.com/) - For generating responsive mockup.
 
 
 ### Testing resources
@@ -128,3 +129,4 @@ Bugs found and resolved during development:
 ### Media
 
 - **Freepik** - For using [illustration](https://www.freepik.com/free-vector/cozy-home-composition-with-character-girl-warm-clothes-reading-book-lounge-chair-illustration_17345961.htm#page=1&query=book%20reading&position=47&from_view=search) in the main navbar and home page of the site.
+- **Canva** - For [generating responsive mockup](https://www.canva.com/).
