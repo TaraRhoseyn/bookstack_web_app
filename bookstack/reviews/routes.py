@@ -61,5 +61,5 @@ def delete_review(review_id) -> object:
     """
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash(
-        "Review removed. To remove the book from your stacks, please visit the Stacks page.")
+        "Review removed. To remove book, visit the Stacks.")
     return redirect(url_for("main.dashboard"))
