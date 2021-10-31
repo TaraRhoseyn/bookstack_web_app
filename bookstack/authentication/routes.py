@@ -43,10 +43,10 @@ def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-    
+
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome back! You're logged in")
                     return redirect(url_for("main.dashboard"))
@@ -87,7 +87,7 @@ def user_profile(username) -> object:
     books_unread = len((books_unread))
     return render_template(
         "user_profile.html", username=session['user'], user=user,
-            books_read=books_read, books_unread=books_unread)
+        books_read=books_read, books_unread=books_unread)
 
 
 @authentication.route("/edit_profile/<username>", methods=["GET", "POST"])
@@ -113,7 +113,6 @@ def edit_profile(username) -> object:
     return redirect(url_for('authentication.login'))
 
 
-
 @authentication.route("/delete_profile/<username>", methods=["GET", "POST"])
 def delete_profile(username) -> object:
     """
@@ -137,7 +136,6 @@ def delete_profile(username) -> object:
         flash("An error occurred when trying to delete this profile" + ":" +
               getattr(e, 'message', repr(e)))
     return redirect(url_for('authentication.register'))
-
 
 
 @authentication.route("/logout")
