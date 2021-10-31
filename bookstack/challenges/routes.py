@@ -7,6 +7,7 @@ from bookstack import mongo
 
 challenges = Blueprint('challenges', __name__)
 
+
 @challenges.route("/add_challenge", methods=["GET", "POST"])
 def add_challenge() -> object:
     """
@@ -60,5 +61,5 @@ def delete_challenge(challenge_id) -> object:
     """
     mongo.db.challenges.remove({"_id": ObjectId(challenge_id)})
     flash(
-        "challenge removed. To remove the book from your stacks, please visit the Stacks page.")
+        "Challenge removed. To remove book, please visit Stacks.")
     return redirect(url_for("main.dashboard"))
