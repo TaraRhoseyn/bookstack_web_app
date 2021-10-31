@@ -12,8 +12,6 @@
                 <img class="user-image" src="{{ user.user_image }}" alt="Your user profile pciture.">
             </div>
         </div>
-        
-        
         <button id="edit_profile_btn" class="green lighten-1 waves-effect waves-light btn">Edit account</button>
         <a href="{{ url_for('authentication.delete_profile', username=session['user']) }}"
             class="waves-effect waves-light btn red">Delete account</a>
@@ -44,7 +42,7 @@
                     <!-- User profile image -->
                     <div class="input-field col s12">
                         <div class="profile-label">Your profile picture:</div>
-                        <input type="file" name="user_image" class="form-control validate" id="user_image" value="file" required>
+                        <input type="file" name="user_image" class="form-control validate" id="user_image" required>
                     </div>
                     <!-- Submit button -->
                     <button class="btn waves-effect waves-light green lighten-1" id="register-form-btn" type="submit"
