@@ -205,8 +205,6 @@ main {
     font-size: 22px;
 }
 
-/* END GRID LAYOUTS */
-
 /* NAVBAR */
 
 body {
@@ -255,7 +253,7 @@ nav a {
     text-align: left;
 }
 
-/* NAVBAR ENDS */
+/* BOOK AND CARD ELEMENTS */
 
 .book-author {
     margin-top: 2px;
@@ -295,8 +293,6 @@ nav a {
     float: right;
 }
 
-/* DASHBOARD ENDS */
-
 /* REGISTER FORM */
 
 @media only screen and (min-width: 1025px) {
@@ -309,11 +305,7 @@ nav a {
     margin-left: 15px;
 }
 
-
-/* REGISTER FORM ENDS */
-
-
-/* MISC */
+/* BUTTONS AND ICONS */
 
 .material-icons {
     color: black;
@@ -372,8 +364,6 @@ nav a {
 .home-cont {
     margin-top: 50px;
 }
-
-/* HOME PAGE ENDS */
 
 /* FOOTER */
 
