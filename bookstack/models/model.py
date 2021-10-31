@@ -2,6 +2,7 @@ from mongoengine import StringField, Document, connect, IntField
 
 connect('bookstack')
 
+
 class Users(Document):
     """
     This collection stores user information.
@@ -29,6 +30,7 @@ class Reviews(Document):
     book_title = StringField(max_length=50, required=True)
     book_author = StringField(max_length=50, required=True)
     added_by = StringField(max_length=20, required=True)
+
 
 class Challenges(Document):
     """
