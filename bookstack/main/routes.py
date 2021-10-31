@@ -28,8 +28,8 @@ def dashboard():
     reviews = mongo.db.reviews.find()
     challenges = mongo.db.challenges.find()
     return render_template(
-        "dashboard.html", books=books, challenges=challenges
-        , reviews=reviews)
+        "dashboard.html", books=books, challenges=challenges,
+        reviews=reviews)
 
 
 @main.route("/review")
