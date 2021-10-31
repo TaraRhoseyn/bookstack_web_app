@@ -335,7 +335,7 @@ nav a {
     font-size: 20px;
 }
 
-.page-headers {
+.page-headers, .dash-desc {
     margin-left: 2.5rem;
 }
 
@@ -356,8 +356,6 @@ nav a {
     width: 100%;
     border-radius: 20%;
 }
-
-/* MISC ENDS */
 
 /* HOME PAGE */
 
