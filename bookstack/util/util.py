@@ -13,6 +13,7 @@ client = boto3.client('s3',
                       aws_secret_access_key=os.environ.get
                       ("AWS_SECRET_ACCESS_KEY"))
 
+
 def store_image(img_to_store: str) -> str:
     """
     This function stores user-inputted
