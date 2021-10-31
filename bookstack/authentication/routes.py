@@ -33,6 +33,7 @@ def register():
         mongo.db.users.insert_one(registered_user)
         session["user"] = request.form.get("username").lower()
         flash("You are now registered!")
+        return redirect(url_for("main.dashboard"))
 
     return render_template("register.html")
 
@@ -48,6 +49,7 @@ def login():
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome back! You're logged in")
+                    return redirect(url_for("main.dashboard"))
             else:
                 flash("Whoops! Incorrect username or password.")
                 return redirect(url_for("authentication.login"))
