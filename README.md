@@ -26,6 +26,13 @@ To use the website you can either create an account and build your stacks, or us
 - I want to see what other users are saying about books I've read or want to read. 
 - I want to challenge myself to read more books.
 
+## Design
+
+### Wireframes
+
+You can view the [PDF file](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/wireframes.pdf) of the wireframes on this repo. If you find the file is taking too long to load, please visit the [Figma file](https://www.figma.com/file/4TWPdbIVCakRCiTsi93FH8/MS3-Wireframe?node-id=0%3A1).
+
+
 ## Structure
 
 ### Physical database model
