@@ -481,6 +481,22 @@ Tool used: Google Lighthouse
 
 Result: All pages pass at least [92% on performance and are in the green for SEO and accessibility too](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/tree/main/bookstack/static/docs/validation/lighthouse).
 
+#### Performing tests on various devices
+
+**Devices tested:**
+
+- Huawei PRA-LX1
+- iPhone SE
+- LENOVO IdeaCentre 3 Desktop PC with a 34" monitor
+- DELL Inspiron 15 5593
+
+**Browser compatibility:**
+
+- Microsoft Edge: Website and user stories work as expected.
+- Google Chrome: Website and user stories work as expected.
+- Safari: Website and user stories work as expected.
+- Firefox: Website and user stories work as expected.
+
 
 ## Bugs
 
