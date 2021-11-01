@@ -365,6 +365,8 @@ Upon realising this I changed my database model to reflect better use of the Mon
 
 **Current/updated database model** 
 
+![New database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/new_database_model.PNG)
+
 ## Technologies Used
 
 ### Languages
