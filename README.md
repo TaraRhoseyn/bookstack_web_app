@@ -23,8 +23,15 @@ To use the website you can either create an account and build your stacks, or us
 ### User goals
 
 - I want to be able to track my reading goals. 
-- I want to see what other users are saying about books I've read or want to read. 
-- I want to challenge myself to read more books.
+- I want to see how I felt about books through book reviews.
+- I want to challenge myself to read more or read specific sets of books.
+- I want to keep track of books I intend to read.
+
+## User experience
+
+I have designed an app-style site with mobile in mind by building the responsive layout mobile-first using Materialize layout utility classes. 
+
+The user experience is heavily structured around the concept of an app-based user journey. Users can see a slice of all their data from a Dashboard which will display the first or last pieces of collection data associated with that specific user. Users also have multiple entry points to edit, delete or add pieces of data, whether from the Dashboard or the individual landing pages available on the navbar.
 
 ## Design
 
