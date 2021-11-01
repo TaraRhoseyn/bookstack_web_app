@@ -13,7 +13,7 @@ To use the website you can either create an account and build your stacks, or us
 
 ## Table of Content
 
-## Project Goals
+## Strategy
 
 ### Website owner business goals
 
@@ -32,6 +32,8 @@ To use the website you can either create an account and build your stacks, or us
 I have designed an app-style site with mobile in mind by building the responsive layout mobile-first using Materialize layout utility classes. 
 
 The user experience is heavily structured around the concept of an app-based user journey. Users can see a slice of all their data from a Dashboard which will display the first or last pieces of collection data associated with that specific user. Users also have multiple entry points to edit, delete or add pieces of data, whether from the Dashboard or the individual landing pages available on the navbar.
+
+## Scope
 
 ### User stories
 
@@ -59,12 +61,154 @@ I have divided my user stories into two categories: first-time users and regular
 15. As a regular visitor, I want to easily be able to edit or delete the books I have marked as read or unread.
 16. As a regular visitor, I want to easily be able to edit or delete the challenges I have set for myself, or make them as complete.
 17. As a regular visitor, I want to easily be able to redit or delete the reviews I have added. 
-18. As a regular visitor, I want to the process of adding data such as book or reviews to be simple and easy enough so that I can easily do multiple within a session.
+18. As a regular visitor, I want the process of adding data such as book or reviews to be simple and easy enough so that I can easily do multiple within a session.
+19. As a regular visitor, I want to easily be able to view my user information, edit it as necessary or delete it.
 
 **Site owner**
 
-19. As a site owner, I want to be able to collect feedback from users in a simple and easy way that I can iterate versions of the website based on an informed understanding of user needs. 
-20. As a site owner, I want users to be able to navigate the website easily so that users are more likely to have an enjoyable experience and return to use the website.
+20. As a site owner, I want to be able to collect feedback from users in a simple and easy way that I can iterate versions of the website based on an informed understanding of user needs. 
+21. As a site owner, I want users to be able to navigate the website easily so that users are more likely to have an enjoyable experience and return to use the website.
+
+## Features
+
+### Current Features
+
+**Feature 1: Home page**
+
+The home page is rendered if no session user is found and directs users to either sign up or log in.
+
+![Feature 1](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-1.PNG)
+
+**Feature 2: Register page**
+
+The registration page allows users to register up to the website through selecting a username, password and uploading a profile picture. The password is passed through to the MongoDB users collection through salt hashing for security. Usernames will only be accepted if the username is not already taken (this error will trigger an error message). The profile picture is uploaded to a AWS S3 Bucket and rendered back to the user through the file path saved as a key value in the MongoDB users collection associated with the user. It's also possible to direct yourself through the Login page if you alredy have an account, through a link next to the main submit button and the login link available on the navbar. Upon successful registration, user's will be directed to their Dashboard and receive confirmation through a flash message.
+
+![Feature 2](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-2.PNG)
+
+**Feature 3: Login page**
+
+The login page allows users to log in with their main account credentials: username and password. Once logged in, the session user will be a key piece of data passed between many functions within the app to render the user's data. The user is also directed to the registration page if they cannot login. Upon successful login, user's will be directed to their Dashboard and receive confirmation through a flash message.
+
+![Feature 3](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-3.PNG)
+
+**Feature 4: Dashboard**
+
+The Dashboard serves as the main hub of the app, where users can quickly glance at their most important data points in one centralized place. It acts as the main home page for users once they've registered/logged in. The page is divided into the header/nav (more on this later), the footer (again, this is a seperate feature) and three cards. Users are only able to see data on the Dashboard that has been added by them personally.
+
+The dashboard as a whole using the above TestAccount credentials (see top of this file):
+
+![Feature 4](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-4.PNG)
+
+*Section 1: The first card, 'Next book to read'*
+
+The 'Next book to read' section displays the first book that users add to their data as 'unread', encouraging readers to clear their 'unread' stack from first to last. The book cover, title and author is all generated from data given by the user in the 'Add book' or 'Edit book' pages and held in the 'books' collection in MongoDB. The book data is connected to the session user through the 'added_by' key within the 'books' collection documents. 
+
+The '+' symbol will direct users to add a new book. The '...' symbol will direct users to view all of their books (the Stacks page). Both symbols are tooltipped to display this information on hover.
+
+![Feature 4a](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-4a.PNG)
+
+*Section 2: The second card, 'Challenge to finish'*
+
+The 'Challenge to finish' section displays the last challenge set by the user, with the option of editing the challenge to mark as complete. In future iterations, I hope that users would be able to manually select which of their challenges they'd like to see displayed on their dashboard.
+
+The '+' symbol will direct users to add a new challenge. The '...' symbol will direct users to view all of their challenges (the Challenges page). Both symbols are tooltipped to display this information on hover.
+
+![Feature 4b](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-4b.PNG)
+
+*Section 3: The third card, 'Your last review'*
+
+The 'Your last review' section displays the last review written by the user, along with the book data attached to that review, with the option of editing the review.
+
+The '+' symbol will direct users to add a new review. The '...' symbol will direct users to view all of their reviews (the Reviews page). Both symbols are tooltipped to display this information on hover.
+
+![Feature 4c](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-4c.PNG)
+
+**Feature 5: Navbar**
+
+The navbar is fixed as a panel on the left side of the panel on desktop mode, and is collapsible triggered through a button on mobile and tablet. If a user is logged in and a session user is available, the full gambit of pages will be available to view and click (Dashboard - Stacks - Reviews - Challenges - User profile - Log out). If a session user is not found, only 'Register' and 'Login' will be available. The navbar also runs along top on with the main logo for the website visible.
+
+![Feature 5](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-5.PNG)
+
+**Feature 6: Footer**
+
+The footer is rather plain and doesn't change much from desktop to tablet and mobile view. I designed it to be plain to not distract from the main navigable elements on the page, especially as the design of the pages were largely modular in nature. The same footer is available on all pages apart from the original home page before users are registered/logged in.
+
+![Feature 6](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-6.PNG)
+
+**Feature 7: Add books**
+
+The 'Add books' page is available through either clicking the 'Add new book' button the Dashboard or Stacks page. This is a form which collects data such as book title, book author, ISBN, whether the book is read or not and sends it to a document in the 'books' collection in the database. If the book is marked as 'Read' by the switch button, a form input will appear asking for a book review. The data inputted into this element will be sent to a document in the 'reviews' collection of the database. 
+
+![Feature 7](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-7.PNG)
+
+**Feature 8: Edit books**
+
+The 'Edit books' page is available by clicking on an associated 'Edit' button associated whenever book data is displayed back to the user. It will render a form to edit pre-populated data associated with that document in particular. Users are also able to delete a book from this book, though they are discouraged from doing so by the use of the 'danger' color of red on the button.
+
+![Feature 8](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-8.PNG)
+
+**Feature 9: Stacks page**
+
+The 'Stacks' page displayed all of the books a user has added to the database. In my original design for this page (available in the wireframes) the page was divided by two cards, one for Unread books and one for Read. However, this became too complex to implement with the time scales and jinja templating limitations due to all of the data coming from the same collection within the database, making repeated iterations difficult. Instead, a description accompanies the books to tell the user which stack they belong to. Stacks work like shelves do in a website such as Goodreads, they're a format to categorise objects. Users can also edit individual books from this page.
+
+![Feature 9](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-9.PNG)
+
+**Feature 10: Reviews page**
+
+The 'Reviews' page displays all of the reviews a user has added to the database. Again like with this other pages, a user can be redirected to edit individual reviews they leave, or add new reviews.
+
+![Feature 10](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-10.PNG)
+
+**Feature 11: Add reviews**
+
+Users are able to add new reviews through a form. It takes the data of book title, book author and book review. 
+
+![Feature 11](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-11.PNG)
+
+**Feature 12: Edit reviews**
+
+Users are able to edit individual reviews by clicking the associated 'edit' button whenever the review is displayed back to the user. The form is mostly pre-populated (with the exception of the textarea element) and users also have the ability to delete the review if they wish. 
+
+![Feature 12](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-12.PNG)
+
+**Feature 13: Challenges page**
+
+Users are able to view all of the challenges they've added and add new challenges by clicking the '+' sign on the card or clicking the 'edit' button associated with each challenge. In future versions of the website, I would like to add the ability for the user to clickly click 'Challenge complete' directly on this page and not have to go through the Edit challenge page to mark the challenge as achieved. If a challenge is marked as complete, that information will be displayed to the user.
+
+![Feature 13](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-13.PNG)
+
+**Feature 14: Edit challenges**
+
+Users are able to edit individual challenges by clicking the associated 'edit' button whenever the challenge is displayed back to the user. The form is pre-populated with the existing data and users also have the ability to delete the challenge if they wish. The main purpose of this page is to allow users to mark the challenge as completed, see above for future feature preference for this method.
+
+![Feature 14](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-14.PNG)
+
+**Feature 15: Add challenges**
+
+Users are able to add new challenges through a form. It takes the data of challenge name. I purposefully left out whether users can mark this challenge as already completed or not as I wanted users to really challenge themselves and only add goals they have not already achieved.
+
+![Feature 15](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-15.PNG)
+
+**Feature 16: User profile**
+
+This page allows users to see their username, how many books they have read and how many they have yet to read. I decided to add this information in here as it was difficult for the users to get a sense of how many books are in associated with their account just by viewing them all together on the Stacks page. It also gives users a sense of where their reading habits are in terms of whether they're primarily reading or planning to read. Users can also see the profile picture that they uploaded when they created their account. Users can edit or delete their accounts from this page also. To edit their profile, a user only has to press the 'Edit account' button and a form will drop down.
+
+![Feature 16](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-16.PNG)
+
+![Feature 16a](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-16a.PNG)
+
+**Feature 17: Contact Us page**
+
+This page is navigable from the footer on all pages (bar the home page). The form is fully functional and uses Email JS to send a message to the site owner (myself). The form is also validated with JavaScript to prevent users being able to submit a message without fully filled in input fields. The message is sent to my email address through the use of the EmailJS API (more information on APIs used in this project further down).
+
+![Feature 17](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-17.PNG)
+
+**Feature 18: 404 Error page**
+
+This page displays when a user enters a URL that does not exist. The main purpose of this page is to let users know that an error has occurred and to redirect them back to the website. The design of this page is simple as I want users to return the main pages of the site as soon as possible upon seeing this page. 
+
+![Feature 18](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/features/feature-18.PNG)
+
 
 ## Design
 
@@ -117,7 +261,7 @@ Upon realising this I changed my database model to reflect better use of the Mon
 ### APIs and Integrations
 
 - [EmailJS API](https://www.emailjs.com/) - For taking data from the contact form and sending it to my email. 
-- [Open Library Covers API](https://openlibrary.org/dev/docs/api/covers) - For retrieving the images of book covers based on the book's ISBN.
+- [Open Library Covers API](https://openlibrary.org/dev/docs/api/covers) - For retrieving the images of book covers based on the book's ISBN inputted by users.
 - [Amazon Web Services (AWS) S3 Buckets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) - For storing and displaying user's profile picture once user uploads the image as part of the registration process.
 
 ### Workspace and version control
