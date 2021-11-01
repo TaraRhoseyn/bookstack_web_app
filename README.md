@@ -1,6 +1,6 @@
 # Bookstack
 
-![Responsive mockup of website](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/images/docs/readme/responsive-mockup.png)
+![Responsive mockup of website](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/responsive-mockup.png)
 
 [View the live project](https://bookstack-ms3.herokuapp.com/)
 
@@ -32,7 +32,7 @@ To use the website you can either create an account and build your stacks, or us
 
 **Original database model**
 
-![Original database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/images/docs/readme/og_database_model.PNG)
+![Original database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/responsive-mockup.png)
 
 The model above was my original intention for the schema of the database used for the project. Due to need for foreign keys I realised this schema would be better deployed using a relational database rather than a NoSQL document-based database that I was using for this project. 
 
