@@ -191,6 +191,7 @@ The 'Add books' page is available through either clicking the 'Add new book' but
 
 *User stories covered by this feature:*
 
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 13. As a regular visitor, I want to be able to change a book from 'read' to 'unread' and vice versa easily. 
 14. As a regular vivistor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 15. As a regular visitor, I want to easily be able to edit or delete the books I have marked as read or unread.
@@ -204,6 +205,7 @@ The 'Edit books' page is available by clicking on an associated 'Edit' button as
 
 *User stories covered by this feature:*
 
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 13. As a regular visitor, I want to be able to change a book from 'read' to 'unread' and vice versa easily. 
 14. As a regular vivistor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 15. As a regular visitor, I want to easily be able to edit or delete the books I have marked as read or unread.
@@ -241,6 +243,7 @@ Users are able to add new reviews through a form. It takes the data of book titl
 
 *User stories covered by this feature:*
 
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 17. As a regular visitor, I want to easily be able to edit or delete the reviews I have added. 
 18. As a regular visitor, I want the process of adding data such as book or reviews to be simple and easy enough so that I can easily do multiple within a session.
 
@@ -274,6 +277,7 @@ Users are able to edit individual challenges by clicking the associated 'edit' b
 
 *User stories covered by this feature:*
 
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 9. As a regular visitor, I want to challenge myself to fulfill reading goals I set for myself.
 14. As a regular vivistor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 16. As a regular visitor, I want to easily be able to edit or delete the challenges I have set for myself, or make them as complete.
@@ -286,6 +290,7 @@ Users are able to add new challenges through a form. It takes the data of challe
 
 *User stories covered by this feature:*
 
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 9. As a regular visitor, I want to challenge myself to fulfill reading goals I set for myself.
 14. As a regular visitor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 16. As a regular visitor, I want to easily be able to edit or delete the challenges I have set for myself, or make them as complete.
@@ -532,6 +537,7 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 | Feature                    |                 Action                 |                 Expected result |     Actual result |
  ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
 | Dashboard |   Click '+' icon on 'Next book to read' card  | Template for 'Add book' renders | Works as expected |
+| Stack |   Click '+' icon on 'Next book to read' card  | Template for 'Add book' renders | Works as expected |
 | Add book template |  Fill out form with book details and submit | Details successfully submitted and confirmation given to user | Works as expected |
 
 [Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-4.PNG)
@@ -555,9 +561,39 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 
 7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Registration page |   Register using form  | To be directed to Dashboard with flash message that confirms registration | Works as expected |
+| Login page |   Log in using form  | To be directed to Dashboard with flash message that confirms login | Works as expected |
+| Edit book page |   Edit book details using form | To be shown a flash message that confirms book as editted | Works as expected |
+| Add book page |   Add book data using form | To be redirected to Dashboard and shown a flash message that confirms book as added | Works as expected |
+| Add review page |   Add book review using form | To be redirected to Dashboard and shown a flash message that confirms review as added | Works as expected |
+| Edit review page |   Edit book review using form | To be shown a flash message that confirms review as editted | Works as expected |
+| Add challenge page |   Add challenge using form | To be redirected to Dashboard and shown a flash message that confirms challenge as added | Works as expected |
+| Edit challenge page |   Edit challenge using form | To be shown a flash message that confirms challenge as editted | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-7.PNG)
+
 8. As a regular visitor, I want to be able to see which book I should read next to guide my reading practices.
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Dashboard |   No action required - Dashboard renders upon logging in/registering  | If book data has been added, Dashboard will render the first book added as 'unread' by the user and display it as 'Next book to read' | Works as expected |
+| Stack |   Find Stack in navbar  | If book data has been added, Stack will render books with the attached information of whether a book is in the unread or read stacks | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-8.PNG)
+
 9. As a regular visitor, I want to challenge myself to fulfill reading goals I set for myself.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Challenge page |   Challenge page found in navbar  | Display challenges with option to edit and add more | Works as expected |
+| Add challenge page |   Click '+' button in challenge card on Dashboard or main card on Challenge page  | To be able to add challenges with form and receive confirmation of challenge added | Works as expected |
+| Edit challenge page |   Click '...' button in challenge card on Dashboard or main card on Challenge page  | To be able to edit challenges with form and receive confirmation of challenge editted | Works as expected |
+| Dashboard |   No action required - Dashboard renders upon logging in/registering  | If challenge data has been added, Dashboard will render the last challenge added and display it as 'Challenge to finish' | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-9.PNG)
+
 
 10. As a regular visitor, I want to be able to give feedback to improve the website over time.
 
