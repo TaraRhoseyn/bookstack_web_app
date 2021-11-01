@@ -354,6 +354,14 @@ nav a {
     width: 100%;
 }
 
+@media only screen and (max-width: 505px) {
+    .home-img {
+        width: 258px;
+        height: 258px;
+    }
+}
+
+
 #home-body {
     padding-left: 10px!important;
     height: 100vh;
