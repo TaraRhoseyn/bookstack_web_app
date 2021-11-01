@@ -60,7 +60,7 @@ main {
         row-gap: 2rem;
     }
 
-    .book-cover, .challenge-title, .edit-button {
+    .book-cover, .challenge-title, .edit-button, .review, .review-title, .review-author {
         margin-left: 30px;
     }
     
