@@ -354,6 +354,10 @@ nav a {
     width: 100%;
 }
 
+.img-label {
+    margin-top: 20px;
+}
+
 @media only screen and (max-width: 505px) {
     .home-img {
         width: 258px;
