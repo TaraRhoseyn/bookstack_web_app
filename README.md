@@ -537,7 +537,7 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 | Feature                    |                 Action                 |                 Expected result |     Actual result |
  ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
 | Dashboard |   Click '+' icon on 'Next book to read' card  | Template for 'Add book' renders | Works as expected |
-| Stack |   Click '+' icon on 'Next book to read' card  | Template for 'Add book' renders | Works as expected |
+| Stack |   Click '+' icon on card  | Template for 'Add book' renders | Works as expected |
 | Add book template |  Fill out form with book details and submit | Details successfully submitted and confirmation given to user | Works as expected |
 
 [Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-4.PNG)
@@ -572,7 +572,7 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 | Add challenge page |   Add challenge using form | To be redirected to Dashboard and shown a flash message that confirms challenge as added | Works as expected |
 | Edit challenge page |   Edit challenge using form | To be shown a flash message that confirms challenge as editted | Works as expected |
 
-[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-7.PNG)
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-7-14.PNG)
 
 8. As a regular visitor, I want to be able to see which book I should read next to guide my reading practices.
 
@@ -597,27 +597,110 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 
 10. As a regular visitor, I want to be able to give feedback to improve the website over time.
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Contact page |   Click Contact Us in footer | Fill out form with message and have confirmation upon message successfully sent | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-10-20.PNG)
+
 11. As a regular visitor, I want to be able to login in a simple, intuitive way with as little friction as possible.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Login page |   Click 'Login' on homepage | Fill out form with details  and have confirmation upon login successfull | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-11.PNG)
 
 12. As a regular visitor, I want to be able to keep track of my thoughts and feelings about the books I read. 
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Review page |   Review page found in navbar  | Display review with option to edit and add more | Works as expected |
+| Add review page |   Click '+' button in review card on Dashboard or main card on review page  | To be able to add review with form and receive confirmation of review added | Works as expected |
+| Edit review page |   Click ''...'' button in review card on Dashboard or main card on review page  | To be able to edit reviews with form and receive confirmation of review editted | Works as expected |
+| Dashboard |   No action required - Dashboard renders upon logging in/registering  | If review data has been added, Dashboard will render the last review added and display it as 'Last review' | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-12.PNG)
+
 13. As a regular visitor, I want to be able to change a book from 'read' to 'unread' and vice versa easily. 
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Edit book page |   Click 'Edit' button in book card on Dashboard or main card on Stack page  | To be able to edit books with form and receive confirmation of books editted | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-13.PNG)
 
 14. As a regular visitor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Registration page |   Register using form  | To be directed to Dashboard with flash message that confirms registration | Works as expected |
+| Login page |   Log in using form  | To be directed to Dashboard with flash message that confirms login | Works as expected |
+| Edit book page |   Edit book details using form | To be shown a flash message that confirms book as editted | Works as expected |
+| Add book page |   Add book data using form | To be redirected to Dashboard and shown a flash message that confirms book as added | Works as expected |
+| Add review page |   Add book review using form | To be redirected to Dashboard and shown a flash message that confirms review as added | Works as expected |
+| Edit review page |   Edit book review using form | To be shown a flash message that confirms review as editted | Works as expected |
+| Add challenge page |   Add challenge using form | To be redirected to Dashboard and shown a flash message that confirms challenge as added | Works as expected |
+| Edit challenge page |   Edit challenge using form | To be shown a flash message that confirms challenge as editted | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-7-14.PNG)
+
 15. As a regular visitor, I want to easily be able to edit or delete the books I have marked as read or unread.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Edit book page |   Click 'Edit' button in book card on Dashboard or main card on Stack page  | To be able to edit/delete books with form and receive confirmation of books editted/deleted | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-15.PNG)
 
 16. As a regular visitor, I want to easily be able to edit or delete the challenges I have set for myself, or make them as complete.
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Edit challenge page |   Click 'Edit' button in challenge card on Dashboard or main card on Challenge page  | To be able to edit/delete challenges with form and receive confirmation of challenge editted/deleted | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-16.PNG)
+
 17. As a regular visitor, I want to easily be able to edit or delete the reviews I have added. 
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+ | Edit review page |   Click 'Edit' button in review card on Dashboard or main card on review page  | To be able to edit and delete reviews with form and receive confirmation of review editted/deleted | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-17.PNG)
 
 18. As a regular visitor, I want the process of adding data such as book or reviews to be simple and easy enough so that I can easily do multiple within a session.
 
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Add book page |   Add book data using form | To be redirected to Dashboard and shown a flash message that confirms book as added | Works as expected |
+| Add review page |   Add book review using form | To be redirected to Dashboard and shown a flash message that confirms review as added | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-18.PNG)
+
 19. As a regular visitor, I want to easily be able to view my user information, edit it as necessary or delete it.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| User profile page |   Click 'User profile' in navbar | To be shown user profile page with username, books read/unread and profile picture | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-19.PNG)
 
 20. As a site owner, I want to be able to collect feedback from users in a simple and easy way that I can iterate versions of the website based on an informed understanding of user needs. 
 
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Contact page |   Click Contact Us in footer | Fill out form with message and have confirmation upon message successfully sent | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-10-20.PNG)
+
 21. As a site owner, I want users to be able to navigate the website easily so that users are more likely to have an enjoyable experience and return to use the website.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Navbar |   None required - rendered upon registration/logging in | Displays all correct links to pages around site | Works as expected |
+| Footer |   None required - rendered upon registration/logging in | Displays all correct links to pages around site | Works as expected |
 
 ## Bugs
 
