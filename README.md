@@ -767,6 +767,61 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 - Make all form input labels black for contrast.
 - Added aria-label to empty link (navbar).
 
+
+## Deployment
+
+1. Create project with [Code Institute full template](https://github.com/Code-Institute-Org/gitpod-full-template). 
+2. Create new repository from template
+3. Open up repository with Gitpod/VSCode/IDE of choice. 
+
+### Local deployment (clone this repository)
+
+1. Log into your GitHub account and find the repository.
+2. Click on the 'Code' button (next to 'Add file').
+3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+4. Then open Git Bash.
+5. Change the current working directory to where you want the cloned directory to be made.
+6. In your IDE's terminal type 'git clone' followed by the URL you copied.
+7. Press Enter.
+8. Your local clone will now be made.
+
+### Using EmailJS
+
+1. Create an account with [Email JS](https://emailjs.com) on their website.
+2. Make a note of your User ID in the 'Intergration' section, this will be needed when calling the API.
+3. Go to 'Email service' section and create a new email service. Note your Service ID, this will be needed when calling the API.
+4. Go to the 'Email template' section and create a new email template with the message outline you would like the site owner to be sent. Make a note of the Template ID, this will be needed when calling the API.
+5. Include your user ID, email service ID and template ID in your sendMail method within an email.js script.
+
+### Using AWS (S3 Bucket)
+
+1. Create an account with [AWS](https://aws.amazon.com/).
+2. Create S3 application, making sure to select your correct region.
+3. Create new bucket, making sure to enable public access and select correct (AWS will warn you against this).
+4. Add bucket policy with the following key values:
+![AWS S3 Bucket policy](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/aws-bucket-policy.PNG).
+5. Add s3_bucket_name and s3_bucket_url variables to your util.py route with correct values.
+
+### Using Mongo
+
+1. Create an account with MongoDB.
+2. Create a database 'cluster'.
+3. Within your newly created cluster, create a database
+4. Within your newly created database, create collections. These collections will store your documents (where the data is housed).
+5. Connect your application by clicking 'Connect' in the 'Databases' section.
+6. Link up your codebase with MongoDB by adding sensitive variables to your local env.py and config vars in Heroku. 
+7. If you're using tech like Flask, you will need to install other dependencies to aid technologies working together.
+
+### Deployment to Heroku
+
+1. Log in to [Heroku](https://www.heroku.com/).
+2. Click 'New' on the Dashboard and select 'Create new app'.
+3. Select your region and create an app name.
+4. Make sure you add all your environment and configuration variables in 'Config Vars' under 'Settings' tab. 
+4. Select 'Deploy' option in menu. 
+5. Enable automatic deployments from your GitHub by connecting accounts and selecting automatic deployment option. 
+6. Click 'Deploy branch' 
+
 ## Credits
 
 ### Code
