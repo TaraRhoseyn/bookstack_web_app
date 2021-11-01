@@ -6,7 +6,7 @@
 
 **User credentials**
 
-To use the website you can either create an account and build your stacks, or use these following user tester credentials:
+To use the website you can either create an account and build your stacks, or use these following test user credentials:
 
 - Username: TestAccount
 - Password: Test1234
@@ -32,6 +32,9 @@ To use the website you can either create an account and build your stacks, or us
 
 You can view the [PDF file](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/wireframes.pdf) of the wireframes on this repo. If you find the file is taking too long to load, please visit the [Figma file](https://www.figma.com/file/4TWPdbIVCakRCiTsi93FH8/MS3-Wireframe?node-id=0%3A1).
 
+**Changes from wireframe to production**
+
+1. In my original design...
 
 ## Structure
 
@@ -186,7 +189,8 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - **W3 Docs** - For [vertical alignments](https://www.w3docs.com/snippets/css/how-to-vertically-align-elements-in-a-div.html) of elements.
 - **Corey Schafer** - For [Blueprints and Configuration guidance for codebase structure](https://www.youtube.com/watch?v=Wfx4YBzg16s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12)
 - **Ansible** - For [indexing loop methods](https://ansiblemaster.wordpress.com/2016/07/27/jinja2-using-loop-index-and-loop-length-examples-etchosts-and-workers-properties/) that allows me to only display to the user the first/last item in dicts on dashboard.html
-
+- **Paul Meeneghan** - For codebase structure based on Blueprints method in [their own MS3](https://github.com/pmeeny/CI-MS3-FootballMemories). 
+-**Be a Better Dev YouTube tutorial** - Helpful in [configuring S3 Bucket](https://www.youtube.com/results?search_query=aws+s3+bucket+public) to display images publically.
 
 ### Media
 
