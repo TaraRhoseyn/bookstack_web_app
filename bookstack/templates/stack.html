@@ -2,6 +2,14 @@
 {% block content %}
     <h1 class="page-headers">Your books:</h1>
     <div class="col s12 grid-card white full-card">
+        <div class="to-read-stack">
+            <a class="tooltipped white add-icon" data-position="top" data-tooltip="Add new book" href="{{ url_for('books.add_book') }}">
+                <i class="material-icons card-icons">add</i>
+            </a>
+            <a class="tooltipped white add-icon" data-position="top" data-tooltip="See all books" href="{{ url_for('main.stack') }}">
+                <i class="material-icons card-icon-see-more">more_horiz</i>
+            </a>
+        </div>
         {% for book in books if book.added_by == session.user %}
             {% if book.is_read == "no" %}
                 <div class="book-in-card center">
