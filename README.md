@@ -447,6 +447,40 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - [W3Schools](https://www.w3schools.com/) - For general best practice on formatting code and fixing small issues.
 - Code Institute Slack - For seeing examples of similar projects and understanding where others aimed to improve.
 
+## Testing
+
+### Validation
+
+#### HTML Validation
+
+Validator used: The [W3C Markup Validation Service](https://validator.w3.org/). 
+
+Result: All pages [pass with 0 errors](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/tree/main/bookstack/static/docs/validation/html-validation).
+
+#### CSS Validation
+
+Validator used: The [WS3 CSS Validation Service](http://jigsaw.w3.org/css-validator/validator).
+
+Result: CSS [passes with 0 errors](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/validation/css-validation/css-validation.PNG).
+
+#### JavaScript Validation
+
+Linter used: [JSHint](https://jshint.com/)
+
+Result: All scripts pass with [0 errors and 0 warnings](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/tree/main/bookstack/static/docs/validation/jshint-validation). Please note: some JSHint results show undefined variables, but they are variables stored in seperate scripts.
+
+#### Accessibility 
+
+Tool used: WebAIM'S WAVE tool. 
+
+Result: All pages [pass with 0 errors](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/tree/main/bookstack/static/docs/validation/accessibility).
+
+#### Performance
+
+Tool used: Google Lighthouse
+
+Result: All pages pass at least [92% on performance and are in the green for SEO and accessibility too](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/tree/main/bookstack/static/docs/validation/lighthouse).
+
 
 ## Bugs
 
