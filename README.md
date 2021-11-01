@@ -73,6 +73,8 @@ I have divided my user stories into two categories: first-time users and regular
 
 ### Current Features
 
+Please note: Whenever data is added, editted or removed from the database, flash messages are displayed to the users.
+
 **Feature 1: Home page**
 
 The home page is rendered if no session user is found and directs users to either sign up or log in.
@@ -324,6 +326,19 @@ This page displays when a user enters a URL that does not exist. The main purpos
 *User stories covered by this feature:*
 
 6. As a first-time user, I want the website to direct me back home if I trigger a 404 error through a bad link.
+
+### Future Features
+
+The following features are features I would like to implement in future iterations of the website. They are by no means extensive, and any future versions would be in consultation with user needs through collected feedback. 
+
+1. More visual and better designed flash messages - Whenever data is added, editted or removed from the database, flash messages are displayed to the users. These flash messages are currently displayed to the user at the top of the page in big, bold red writing. There are lots of design opportunities to improve upon this. 
+2. Seperated cards on the Stacks page - Greater separation between 'read' and 'unread' books on the Stacks page (see earlier Feature profile for details on original design vs current design)
+3. Ability to create new 'Stacks' - This concept was the original reason for pursuing the 'Bookstack' idea. In future versions, users will be able to create any stack they want and fully customize the organisation & presentation of their books.
+4. Ability to mark challenges are complete from the Dashboard/Challenges page - Currently users have to click the 'Edit' button associated with individual challenges to render a 'Edit challenge' page then mark challenge as complete. In future versions, users will be able to mark the challenge as read alongside the 'Edit' button where challenges appears. 
+5. Ability to pick which challenges and books appear on Dashboard - Currently the first unread book added to the database and the last challenge added to the database are displayed on the user's Dashboard. In future versions, users will be able to determine which book and challenge will be featured there. 
+6. Data stored in relational database - although outside of the scope of the project goals in the timeframes given, in an ideal world this project's data would be stored within a relational database. This would give the project much greater ability to cross-populate data through the use of foreign & primary keys and inform users of interesting reading insights.
+7. Search function - A nice-to-have feature would be for users to have a search engine that they could either (a) search for data they have added or (b) search for books held in APIs such as Open Library or Google Books to be add books directly without having to input all of the data fields manually. 
+8. User profile picture used on Dashboard - In future versions, users will be able to see a small avatar of their profile picture in the top right of the page on the Dashboard where they can be redirected to their user profile if clicked.
 
 
 ## Design
