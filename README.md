@@ -581,3 +581,9 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 
 - **Freepik** - For using [illustration](https://www.freepik.com/free-vector/cozy-home-composition-with-character-girl-warm-clothes-reading-book-lounge-chair-illustration_17345961.htm#page=1&query=book%20reading&position=47&from_view=search) in the main navbar and home page of the site.
 - **Canva** - For [generating responsive mockup](https://www.canva.com/).
+
+## Acknowledgements:
+
+- To my wife Yasmine Haggar for her testing support and feedback on this project.
+- To my mentor Mo Shami for his feedback, advice and support.
+- To the Code Institute slack community of students and alumni for their helpful advice, resources, guidance and support.
