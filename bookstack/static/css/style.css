@@ -318,10 +318,6 @@ button, a {
     color: green;
 } 
 
-#add_book {
-    margin-top: 20px;
-}
-
 .hidden {
     display: none;
 }
@@ -344,7 +340,7 @@ button, a {
 }
 
 .stack-btn {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .user-image {
