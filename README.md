@@ -32,7 +32,7 @@ To use the website you can either create an account and build your stacks, or us
 
 **Original database model**
 
-![Original database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/responsive-mockup.png)
+![Original database model](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/readme/og_database_model.PNG)
 
 The model above was my original intention for the schema of the database used for the project. Due to need for foreign keys I realised this schema would be better deployed using a relational database rather than a NoSQL document-based database that I was using for this project. 
 
@@ -72,9 +72,17 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - [Freepik](https://www.freepik.com/) - Imagery used in design.
 - [Favicon Generator](https://www.favicon-generator.org/) - Generating Favicon.
 - [Canva](https://www.canva.com/) - For generating responsive mockup.
+- [Image Compressor](https://imagecompressor.com/) - For compressing PNG files to optimize webpage performance.
 
 
 ### Testing resources
+
+- [WebAIM's WAVE tool](https://wave.webaim.org/) - For testing accessibility.
+- [The W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) - For validating HTML.
+- [The W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/#validate_by_input) - For validating CSS.
+- [JSHint](https://jshint.com/) - For testing JavaScript.
+- [PEP8 Online](http://pep8online.com/) - For checking PEP8 compliance.
+- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/) - For checking performance, SEO and accessibility.
 
 ### General resources
 
@@ -85,7 +93,7 @@ Upon realising this I changed my database model to reflect better use of the Mon
 
 ## Bugs
 
-Bugs found and resolved during development:
+### Bugs found and resolved during development:
 
 **Bug 1**: When rendering user information to the user_profile template, the data for the number of books users had read or not read was causing an error due to the data being a cursor Object. 
 - **Solution**: I researched the topic on Stack Overflow I converted the cursor Object into a dictionary to then loop over and append to existing variable, which is where the data is displayed from. 
@@ -111,6 +119,8 @@ Bugs found and resolved during development:
 
 **Bug 7**: When trying to display both read and unread books to the user in stack.html, my method of displaying the unread books was not rendering the data from the database despite all correct key and value names. 
 - **Solution**: My original method was to use two *for* loops to iterate over the 'books' dictionary in the database and in each *for* loop have an *if* statement that found either books marked as read or unread. I realised that having two iterating methods was not going to work, as the dictionary was already being unpacked by the first so the second didn't have anything to iterate over. I adjusted my design to make only one *for* loop work. Now in this *for* loop there's one *if* statement that has an *else* condition that can correctly display unread books to the user. 
+
+
 
 
 ## Credits
