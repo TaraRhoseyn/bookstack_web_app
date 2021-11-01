@@ -48,6 +48,7 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [Python](https://www.python.org/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
 
 ### Frameworks & Libraries
 
@@ -57,6 +58,17 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - [MongoDB](https://www.mongodb.com/) - Cloud-based NoSQL database, used for housing data.
 - [Google Fonts](https://fonts.google.com/) - Merriweather font used in the design throughout.
 - [Google Icons](https://fonts.google.com/icons) - Used in the design throughout.
+- [Boto](http://boto.cloudhackers.com/en/latest/) - Python interface to AWS.
+- [Werkzeug](https://pypi.org/project/Werkzeug/) - WSCI web application library to assist in debugging and security validations.
+- [DNSPython](https://pypi.org/project/dnspython/) - DNS toolkit for Python.
+- [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) - Helpers to bridge Flask and PyMongo.
+
+
+### APIs and Integrations
+
+- [EmailJS API](https://www.emailjs.com/) - For taking data from the contact form and sending it to my email. 
+- [Open Library Covers API](https://openlibrary.org/dev/docs/api/covers) - For retrieving the images of book covers based on the book's ISBN.
+- [Amazon Web Services (AWS) S3 Buckets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) - For storing and displaying user's profile picture once user uploads the image as part of the registration process.
 
 ### Workspace and version control
 
