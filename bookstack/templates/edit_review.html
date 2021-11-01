@@ -25,10 +25,10 @@
                     <label for="book_review" class="black-text">Book review</label>
                 </div>
                 <!-- Submit button-->
-                <button class="btn waves-effect waves-light green" id="edot_review" type="submit"
+                <button class="btn waves-effect waves-light green black-text" id="edot_review" type="submit"
                     name="action">Submit changes</button>
-                <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light">Cancel changes</a>
-                <a href="{{ url_for('reviews.delete_review', review_id=review._id) }}" class="waves-effect waves-light btn red">Delete review</a>
+                <a href="{{ url_for('main.dashboard') }}" class="btn waves-effect waves-light black-text">Cancel changes</a>
+                <a href="{{ url_for('reviews.delete_review', review_id=review._id) }}" class="waves-effect waves-light btn red black-text">Delete review</a>
             </div>
         </form>
     </div>
