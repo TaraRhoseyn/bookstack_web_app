@@ -33,6 +33,39 @@ I have designed an app-style site with mobile in mind by building the responsive
 
 The user experience is heavily structured around the concept of an app-based user journey. Users can see a slice of all their data from a Dashboard which will display the first or last pieces of collection data associated with that specific user. Users also have multiple entry points to edit, delete or add pieces of data, whether from the Dashboard or the individual landing pages available on the navbar.
 
+### User stories
+
+I have divided my user stories into two categories: first-time users and regular visitors, with the understanding that one of the key goals of the website is to encourage returnability in the users of the website.
+
+**First-time users**
+
+1. As a first-time user, I want to be able to register in a simple, intuitive way with as little friction as possible.
+2. As a first-time user, I want clear instructions on how to access all of the features of the website. 
+3. As a first-time user, I want to be able to personalize my profile with some personal touches such as a profile picture associated with my account. 
+4. As a first-time user, I want to be able to add books to my data to keep track of which books I've read or not read. 
+5. As a first-time user, I want to be able to log out easily so that I can come back to populating my account at a later date.
+6. As a first-time user, I want the website to direct me back home if I trigger a 404 error through a bad link.
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
+
+**Regular visitors**
+
+8. As a regular visitor, I want to be able to see which book I should read next to guide my reading practices.
+9. As a regular visitor, I want to challenge myself to fulfill reading goals I set for myself.
+10. As a regular visitor, I want to be able to give feedback to improve the website over time.
+11. As a regular visitor, I want to be able to login in a simple, intuitive way with as little friction as possible.
+12. As a regular visitor, I want to be able to keep track of my thoughts and feelings about the books I read. 
+13. As a regular visitor, I want to be able to change a book from 'read' to 'unread' and vice versa easily. 
+14. As a regular vivistor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
+15. As a regular visitor, I want to easily be able to edit or delete the books I have marked as read or unread.
+16. As a regular visitor, I want to easily be able to edit or delete the challenges I have set for myself, or make them as complete.
+17. As a regular visitor, I want to easily be able to redit or delete the reviews I have added. 
+18. As a regular visitor, I want to the process of adding data such as book or reviews to be simple and easy enough so that I can easily do multiple within a session.
+
+**Site owner**
+
+19. As a site owner, I want to be able to collect feedback from users in a simple and easy way that I can iterate versions of the website based on an informed understanding of user needs. 
+20. As a site owner, I want users to be able to navigate the website easily so that users are more likely to have an enjoyable experience and return to use the website.
+
 ## Design
 
 ### Wireframes
