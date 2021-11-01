@@ -120,8 +120,41 @@ Upon realising this I changed my database model to reflect better use of the Mon
 **Bug 7**: When trying to display both read and unread books to the user in stack.html, my method of displaying the unread books was not rendering the data from the database despite all correct key and value names. 
 - **Solution**: My original method was to use two *for* loops to iterate over the 'books' dictionary in the database and in each *for* loop have an *if* statement that found either books marked as read or unread. I realised that having two iterating methods was not going to work, as the dictionary was already being unpacked by the first so the second didn't have anything to iterate over. I adjusted my design to make only one *for* loop work. Now in this *for* loop there's one *if* statement that has an *else* condition that can correctly display unread books to the user. 
 
+### Fixes required for validation purposes:
 
+#### HTML Validation
 
+- Removed duplicate IDs on Register page.
+- Removed value attribute from input elements from Register page.
+- Added alt attribute to image found on home page. 
+- Added alt attribute to image found on navbar across the site. 
+- Removed duplicate main element rendered by the Dashboard template.
+- Removed duplicate IDs on Dashboard page. 
+- Removed redundant aria-describedby attributes on all i elements across the site.
+- Added space between attributes found on form elements across the site.
+- Removed stray end div tags on all form elements across the site.
+- Removed pattern attribute from textarea eleements. 
+
+#### CSS Validation
+
+- None required. 
+
+#### PEP8 Compliance
+
+- Added docustrings to all functions.
+- Added new blank line at the end of files.
+- Added two blank lines above functions.
+- Adjusted indentation on a handful of functions.
+
+#### JSHint
+
+- None required.
+
+#### WAVE
+
+- Made all button text black for contrast.
+- Make all form input labels black for contrast.
+- Added aria-label to empty link (navbar).
 
 ## Credits
 
