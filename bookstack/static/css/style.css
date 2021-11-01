@@ -306,6 +306,10 @@ nav a {
 
 /* BUTTONS AND ICONS */
 
+button, a {
+    margin-bottom: 5px;
+}
+
 .material-icons {
     color: black;
 } 
