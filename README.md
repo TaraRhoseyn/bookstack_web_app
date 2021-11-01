@@ -339,6 +339,7 @@ The following features are features I would like to implement in future iteratio
 6. Data stored in relational database - although outside of the scope of the project goals in the timeframes given, in an ideal world this project's data would be stored within a relational database. This would give the project much greater ability to cross-populate data through the use of foreign & primary keys and inform users of interesting reading insights.
 7. Search function - A nice-to-have feature would be for users to have a search engine that they could either (a) search for data they have added or (b) search for books held in APIs such as Open Library or Google Books to be add books directly without having to input all of the data fields manually. 
 8. User profile picture used on Dashboard - In future versions, users will be able to see a small avatar of their profile picture in the top right of the page on the Dashboard where they can be redirected to their user profile if clicked.
+9. More error pages - Due to time constraints I only managed to make a 404 page, but in the future more would be supplied to handle errors such as 500. 
 
 
 ## Design
@@ -430,6 +431,7 @@ Upon realising this I changed my database model to reflect better use of the Mon
 - [Favicon Generator](https://www.favicon-generator.org/) - Generating Favicon.
 - [Canva](https://www.canva.com/) - For generating responsive mockup.
 - [Image Compressor](https://imagecompressor.com/) - For compressing PNG files to optimize webpage performance.
+- [QuickDBD](https://www.quickdatabasediagrams.com/) - For designing the physical database models.
 
 
 ### Testing resources
@@ -497,6 +499,89 @@ Result: All pages pass at least [92% on performance and are in the green for SEO
 - Safari: Website and user stories work as expected.
 - Firefox: Website and user stories work as expected.
 
+
+### Testing user stories
+
+1. As a first-time user, I want to be able to register in a simple, intuitive way with as little friction as possible.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Registration page |   Click 'Sign up' CTA on home page, fill out form, receive feedback that user has registered  | Upon filling out the form to be directed to Dashboard with positive feedback to confirm registration | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-1.PNG)
+
+2. As a first-time user, I want clear instructions on how to access all of the features of the website. 
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Dashboard page information |   No action required - only registering  | To be redirected to Dashboard upon registering where information on the website features is clearly visible | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-2.PNG)
+
+3. As a first-time user, I want to be able to personalize my profile with some personal touches such as a profile picture associated with my account. 
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Registration page |   To fill out registration form with upload of profile picture  | Profile picture successfully uploaded | Works as expected |
+| User profile page |   No action required - only finding the User profile page from navbar  | To find my profile picture that I uploaded upon registration and be able to edit it | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-3.PNG)
+
+4. As a first-time user, I want to be able to add books to my data to keep track of which books I've read or not read. 
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Dashboard |   Click '+' icon on 'Next book to read' card  | Template for 'Add book' renders | Works as expected |
+| Add book template |  Fill out form with book details and submit | Details successfully submitted and confirmation given to user | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-4.PNG)
+
+
+5. As a first-time user, I want to be able to log out easily so that I can come back to populating my account at a later date.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| Navbar |   Click 'Log out' on navbar  | To be logged out and confirmation given to user | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-5.PNG)
+
+6. As a first-time user, I want the website to direct me back home if I trigger a 404 error through a bad link.
+
+| Feature                    |                 Action                 |                 Expected result |     Actual result |
+ ---------------------------------- | :------------------------------------ | ---------------------------------------- | ---------------- |
+| 404 Error page |   Attempt an incorrect URL  | To be directed to a 404 page | Works as expected |
+
+[Screenshots to show user story](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob/main/bookstack/static/docs/testing/user-story-6.PNG)
+
+7. As a first-time user, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
+
+8. As a regular visitor, I want to be able to see which book I should read next to guide my reading practices.
+
+9. As a regular visitor, I want to challenge myself to fulfill reading goals I set for myself.
+
+10. As a regular visitor, I want to be able to give feedback to improve the website over time.
+
+11. As a regular visitor, I want to be able to login in a simple, intuitive way with as little friction as possible.
+
+12. As a regular visitor, I want to be able to keep track of my thoughts and feelings about the books I read. 
+
+13. As a regular visitor, I want to be able to change a book from 'read' to 'unread' and vice versa easily. 
+
+14. As a regular visitor, I want clear feedback as to whether my data has been successfully changed/added/deleted at all touch points on the website.
+
+15. As a regular visitor, I want to easily be able to edit or delete the books I have marked as read or unread.
+
+16. As a regular visitor, I want to easily be able to edit or delete the challenges I have set for myself, or make them as complete.
+
+17. As a regular visitor, I want to easily be able to edit or delete the reviews I have added. 
+
+18. As a regular visitor, I want the process of adding data such as book or reviews to be simple and easy enough so that I can easily do multiple within a session.
+
+19. As a regular visitor, I want to easily be able to view my user information, edit it as necessary or delete it.
+
+20. As a site owner, I want to be able to collect feedback from users in a simple and easy way that I can iterate versions of the website based on an informed understanding of user needs. 
+
+21. As a site owner, I want users to be able to navigate the website easily so that users are more likely to have an enjoyable experience and return to use the website.
 
 ## Bugs
 
