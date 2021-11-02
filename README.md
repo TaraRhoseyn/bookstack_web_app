@@ -106,7 +106,7 @@ I have divided my user stories into two categories: first-time users and regular
 
 ### Design
 
-My overall approach to the design of the website was so create a SaSS or webapp style that was contemporary in layout but classic in it's overall Look and Feel. 
+My overall approach to the design of the website was so create a SaaS or webapp style that was contemporary in layout but classic in it's overall Look and Feel. 
 
 I was heavily inspired by webapps such as Coinbase and Heroku with their clean, minimalist and modular way of designing web pages. 
 
