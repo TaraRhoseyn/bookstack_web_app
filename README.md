@@ -130,7 +130,7 @@ You can view the [PDF file](https://github.com/TaraRhoseyn/CI_MS3_Bookstack/blob
 
 **Changes from wireframe to production**
 
-1. In my original design, I had envisioned having pagination and more modular layouts on some of the individual pages such as Stacks and Challenges. Given the timescales and templating limitations, it was difficult to achieve this without breaking iteration conventions. See 'Future features' later on to see further details on layout changes in future iterations of this website.
+In my original design, I had envisioned having pagination and more modular layouts on some of the individual pages such as Stacks and Challenges. Given the timescales and templating limitations, it was difficult to achieve this without breaking iteration conventions. See 'Future features' later on to see further details on layout changes in future iterations of this website.
 
 ### Structure
 

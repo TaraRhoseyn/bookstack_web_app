@@ -46,7 +46,7 @@ def edit_challenge(challenge_id) -> object:
         }
         mongo.db.challenges.update(
             {"_id": ObjectId(challenge_id)}, editted_challenge)
-        flash("challenge editted!")
+        flash("Challenge editted!")
 
     challenge = mongo.db.challenges.find_one({"_id": ObjectId(challenge_id)})
     return render_template("edit_challenge.html", challenge=challenge)
